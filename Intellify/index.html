@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Intellify</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="images/intellify-logo.png?v=1" type="image/png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Caveat:wght@400..700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Mono:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HU&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="home-page">
+    <!-- /*=========================== Main Navbar =========================*/ -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-transparent has-scroll-effect" id="mainNavbar">
+        <div class="container-lg py-2 px-2">
+            <!-- Navbar Title -->
+            <a class="navbar-brand syncopate-700 text-uppercase fs-lg-4 fs-5" href="index.html">
+                <img src="images/intellify-logo.png" alt="Intellify Logo" class="img-fluid" height="50"
+                    style="height: 50px; width: auto;">
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border: none; box-shadow: none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+    
+                <!-- Off canvas Title (below: 992px) -->
+                <div class="offcanvas-header">
+                    <a class="navbar-brand syncopate-700 text-uppercase fs-lg-4 fs-5" href="index.html">
+                        <img src="images/intellify-logo.png" alt="Intellify Logo" class="img-fluid" height="50"
+                            style="height: 50px; width: auto;">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+    
+                <div class="offcanvas-body d-lg-flex justify-content-between align-items-center">
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 align-items-lg-center flex-wrap gap-3">
+                        <li class="nav-item jost-500"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="#">Services</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="industries.html">Industries</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="agentic.html">Agentic AI</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <!-- End -->
+    
+                    <!-- /* Search and Talk Button on Navbar */ -->
+                    <!-- <span class="d-block d-lg-none">SEARCH FOR</span> -->
+                    <div class="nav-right-actions d-flex align-items-center ms-lg-3 position-relative">
+                        <a href="#" class="btn-talk jost-500 text-decoration-none" id="letsTalkBtn">LET'S TALK!</a>
+                        <form class="search-wrapper" id="searchWrapper" role="search">
+                            <input class="search-input jost-400" type="search" placeholder="type and search"
+                                aria-label="Search" id="searchInput" />
+                            <button class="search-action-btn" type="submit" aria-label="Submit Search">
+                                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                            </button>
+                            <button class="close-btn" type="button" id="closeSearchBtn" aria-label="Close Search">
+                                <i class="fas fa-times fa-lg"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- End -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- /*=========================== Main Navbar End =========================*/ -->
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- /*=========================== Hero Section  =========================*/ -->
+        <section class="hero-section position-relative container-fluid p-0 overflow-hidden">
+            <div class="swiper hero-slider">
+
+                <!-- Swiper Slider  -->
+                <div class="swiper-wrapper">
+
+                    <!-- Slider 1 -->
+                    <div class="swiper-slide d-flex justify-content-center align-items-center p-4 position-relative">
+                        <div class="hero-overlay"></div>
+                        <img src="images/hero-section-img-1.jpg"
+                            class="img-fluid position-absolute top-0 left-0 object-fit-cover w-100 z-1"
+                            alt="Consultify Slide 1">
+                        <div class="col-lg-7 col-9 hero-content text-white ">
+                            <h1 class="plus-jakarta-sans-200 text-uppercase text-lg-start text-center">INTELLIFY: PIONEERING AI SOLUTIONS FOR TOMORROW'S CHALLENGES</h1>
+                            <div class="col-lg-9 col-12 mt-5 hero-content-overview">
+                                <h3 class="jost-400">Overview <span>
+                                        <hr style="width: 40px; border: 2px solid #B0E1F4; opacity: 1;">
+                                    </span></h3>
+
+                                <p class="jost-400">At Intellify, we're not just keeping pace with the AI revolution—we're leading it. Our mission is to empower businesses
+                                across industries with cutting-edge artificial intelligence solutions that drive innovation, efficiency, and growth.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider 2 -->
+                    <div class="swiper-slide d-flex justify-content-center align-items-center p-4 position-relative">
+                        <div class="hero-overlay"></div>
+                        <img src="images/hero-section-img-2.jpg"
+                            class="img-fluid position-absolute top-0 left-0 object-fit-cover w-100 z-1"
+                            alt="Consultify Slide 2">
+                        <div class="col-lg-7 col-9 hero-content text-white ">
+                            <h1 class="plus-jakarta-sans-200 text-uppercase text-lg-start text-center ">INTELLIFY: PIONEERING AI SOLUTIONS FOR TOMORROW'S CHALLENGES</h1>
+                            <div class="col-lg-9 col-12 mt-5 hero-content-overview">
+                                <h3 class="jost-400">Overview <span>
+                                        <hr style="width: 40px; border: 2px solid #B0E1F4; opacity: 1;">
+                                    </span></h3>
+                                <p class="jost-400 ">At Intellify, we're not just keeping pace with the AI revolution—we're leading it. Our mission is to empower businesses
+                                across industries with cutting-edge artificial intelligence solutions that drive innovation, efficiency, and growth.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider 3 -->
+                    <div class="swiper-slide  d-flex justify-content-center align-items-center p-4 position-relative">
+                        <div class="hero-overlay"></div>
+                        <img src="images/hero-section-img-3.jpg"
+                            class="img-fluid position-absolute top-0 left-0 object-fit-cover w-100 z-1"
+                            alt="Consultify Slide 3">
+                        <div class="col-lg-7 col-9 hero-content text-white ">
+                            <h1 class="plus-jakarta-sans-200 text-uppercase text-lg-start text-center ">INTELLIFY: PIONEERING AI SOLUTIONS FOR TOMORROW'S CHALLENGES</h1>
+                            <div class="col-lg-9 col-12 mt-5 hero-content-overview">
+                                <h3 class="jost-400">Overview <span>
+                                        <hr style="width: 40px; border: 2px solid #B0E1F4; opacity: 1;">
+                                    </span></h3>
+
+                                <p class="jost-400 ">At Intellify, we're not just keeping pace with the AI revolution—we're leading it. Our mission is to empower businesses
+                                across industries with cutting-edge artificial intelligence solutions that drive innovation, efficiency, and growth.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider 4 -->
+                    <div class="swiper-slide d-flex justify-content-center align-items-center p-4 position-relative">
+                        <div class="hero-overlay"></div>
+                        <img src="images/hero-section-img-4.jpg"
+                            class="img-fluid position-absolute top-0 left-0 object-fit-cover w-100 z-1"
+                            alt="Consultify Slide 4">
+                        <div class="col-lg-7 col-9 hero-content text-white ">
+                            <h1 class="plus-jakarta-sans-200 text-uppercase text-lg-start text-center">INTELLIFY: PIONEERING AI SOLUTIONS FOR TOMORROW'S CHALLENGES</h1>
+                            <div class="col-lg-9 col-12 mt-5 animated-fade-up delay-2 hero-content-overview">
+                                <h3 class="jost-400">Overview <span>
+                                        <hr style="width: 40px; border: 2px solid #B0E1F4; opacity: 1;">
+                                    </span></h3>
+
+                                <p class="jost-400 ">At Intellify, we're not just keeping pace with the AI revolution—we're leading it. Our mission is to empower businesses
+                                across industries with cutting-edge artificial intelligence solutions that drive innovation, efficiency, and growth.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Swiper Pagination -->
+                <div class="swiper-pagination my-custom-vertical-dots"></div>
+            </div>
+            </div>
+
+            <!-- Slider Arrow Keys  -->
+            <div class="arrow-keys d-flex flex-md-column flex-row gap-2" style="z-index: 10;">
+                <a href="javascript:void(0);" class="custom-swiper-button-prev text-decoration-none">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </a>
+
+                <a href="javascript:void(0);" class="custom-swiper-button-next text-decoration-none">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Follow Us on Social Media  -->
+            <div class="social-media d-flex align-items-center position-absolute text-white gap-2" style="z-index: 5;">
+                <div class="d-lg-block d-none ">
+                    <h3 class="p-0 plus-jakarta-sans-200 text-uppercase mb-0">Follow Us</h3>
+                </div>
+                <div class="social-media-icons d-flex flex-column flex-lg-row align-items-center gap-2">
+                    <a href="#" class="social-icon-circle d-flex align-items-center justify-content-center text-decoration-none">
+                        <i class="fa-brands fa-meta" style="font-size: 12px;"></i>
+                    </a>
+                    <a href="#" class="social-icon-circle d-flex align-items-center justify-content-center text-decoration-none">
+                        <i class="fa-brands fa-x-twitter" style="font-size: 12px;"></i>
+                    </a>
+                    <a href="#" class="social-icon-circle d-flex align-items-center justify-content-center text-decoration-none">
+                        <i class="fa-brands fa-instagram" style="font-size: 12px;"></i>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+        <!-- /*=========================== Hero Section End  =========================*/ -->
+
+        <!-- /*=========================== Carousel Section  =========================*/ -->
+
+        <!-- <section class="carousel-section section container-fluid py-4 px-5 overflow-hidden">
+            <div class="container px-lg-3">
+
+                <div class="swiper carousel-swiper mx-lg-1">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="images/sweden-black.svg" class="logo-img" alt="Sweden Black">
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="images/philadelphia-black.svg" class="logo-img" alt="Philadelphia Black">
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="images/vancouver-black.svg" class="logo-img" alt="Vancouver Black">
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="images/springfield-black.svg" class="logo-img" alt="Springfield Black">
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="images/milano-black.svg" class="logo-img" alt="Milano Black">
+                        </div>
+
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="images/sweden-black.svg" class="logo-img" alt="Sweden Black">
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="images/philadelphia-black.svg" class="logo-img" alt="Philadelphia Black">
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="images/vancouver-black.svg" class="logo-img" alt="Vancouver Black">
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="images/springfield-black.svg" class="logo-img" alt="Springfield Black">
+                        </div>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center">
+                            <img src="images/milano-black.svg" class="logo-img" alt="Milano Black">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- /*=========================== Carousel Section End =========================*/ -->
+
+        <!--  /*=========================== Services Section  =========================*/ -->
+        <section class="services-section container-fluid py-5 overflow-hidden">
+            <div class="container-lg py-5">
+                <div class="row g-3 g-lg-0">
+                    <div class="col-lg-3 col-sm-7 pe-4">
+                        <div class="services-intro">
+                            <h3 class="jost-400 my-3" data-aos="fade-left">— OUR SERVICES</h3>
+                            <h1  class="plus-jakarta-sans-600 dynamic-typewriter" data-speed="65" data-delay="300" data-threshold="0.2">Intellify's AI Expertise & Services</h1>
+
+                            <button class="our-services my-5 ">
+                                <a href="#" class=" jost-500 text-decoration-none">All Services
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 21 21" width="30">
+                                        <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" transform="translate(6 6)">
+                                            <path d="m8.5 7.5v-7h-7"></path>
+                                            <path d="m8.5.5-8 8"></path>
+                                        </g>
+                                    </svg></span>
+                                </a>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row row-cols-sm-2 row-cols-1 ms-lg-5 gy-4 gy-lg-0">
+                            <div class="col services-card">
+                                <!-- <h5 class="jost-400 ">Machine Learning & NLP</h5> -->
+                                <h2 class="jost-400 py-2">Machine Learning & NLP</h2>
+                                <hr>
+                                <p class="jost-400 mb-0" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                                    data-aos-delay="500" data-aos-offset="0" data-aos-duration="2000">
+                                    We leverage advanced ML algorithms to extract actionable insights and unlock the power of human language
+                                </p>
+
+                                <ul class="services-list list-unstyled mt-4 jost-500 ps-0" data-aos="fade-up" data-aos-duration="500"
+                                    data-aos-delay="500">
+                                    <li>Predictive Analytics</li>
+                                    <li>Computer Vision</li>
+                                    <li>Chatbots & Sentiment Analysis</li>
+                                    <li>Automated Content Generation</li>
+                                </ul>
+                            </div>
+                            <div class="col services-card">
+                                <!-- <h5 class="jost-400">Generative AI & Governance</h5> -->
+                                <h2 class="jost-400 py-2">Generative AI & Governance</h2>
+                                <hr>
+                                <p class="jost-400 mb-0" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                                    data-aos-delay="500" data-aos-offset="0" data-aos-duration="2000">
+                                Harness the creative potential of AI while ensuring your solutions are transparent, fair, and compliant.
+                                </p>
+                                <ul class="services-list list-unstyled mt-4 jost-500 ps-0" data-aos="fade-up"
+                                    data-aos-duration="500" data-aos-delay="500">
+                                    <li>Text & Image Generation</li>
+                                    <li>Automated Code Production</li>
+                                    <li>Responsible AI Development</li>
+                                    <li>Ethics & Regulatory Compliance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- /*=========================== Services Section End =========================*/ -->
+
+        <!--  /*=========================== Company Insights Section  =========================*/ -->
+        <section class="insights-section">
+            <div class="container-fluid p-0">
+                <div class="row g-0 align-items-stretch">
+                    <!-- Insights Left Section -->
+                    <div class="insights-media col-lg-5 col-12">
+
+                        <figure class="insights-figure mb-0">
+                            <div class="insights-slide active">
+                                <img src="images/insights-1.jpg" class="object-fit-cover d-block"
+                                    alt="Modern office building">
+                            </div>
+
+                            <div class="insights-slide">
+                                <img src="images/insights-2.jpg" class="object-fit-cover d-block"
+                                    alt="Modern office building">
+                            </div>
+
+                            <div class="insights-slide">
+                                <img src="images/insights-3.jpg" class="object-fit-cover d-block"
+                                    alt="Modern office building">
+                            </div>
+
+                            <div class="insights-slide">
+                                <img src="images/insights-4.jpg" class="object-fit-cover d-block"
+                                    alt="Modern office building">
+                            </div>
+                        </figure>
+
+                        <div class="insights-overlay" aria-hidden="true"></div>
+
+                        <figcaption class="insights-caption ms-lg-3 p-5">
+                            <h3 class="jost-400" data-aos="fade-left">— ABOUT US</h3>
+                            <h1 class="plus-jakarta-sans-600 m-0 mt-2 dynamic-typewriter"  data-speed="65" data-delay="300" data-threshold="0.2">Transforming Businesses Through AI</h1>
+                        </figcaption>
+
+                    </div>
+
+                    <!-- Insights Right Section -->
+                    <div class="col-lg-7 col-12 py-5 px-4">
+                        <article class="h-100 d-flex flex-column justify-content-center mx-lg-5" >
+
+                            <!-- Accordion Start -->
+                            <div class="accordion insights-accordion" id="insightsAccordion" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                                    data-aos-delay="500" data-aos-offset="0" data-aos-duration="1500">
+
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button plus-jakarta-sans-600" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseStreamlineOperations"
+                                            aria-expanded="true" aria-controls="collapseStreamlineOperations">
+                                            Streamline Operations
+                                        </button>
+                                    </h3>
+                                    <div id="collapseStreamlineOperations" class="accordion-collapse collapse show"
+                                        data-bs-parent="#insightsAccordion">
+                                        <div class="accordion-body">
+                                            <p class="jost-400">
+                                                In today's rapidly evolving digital landscape, AI isn't just an option—it's a necessity. We help organizations harness
+                                                the full potential of AI to drive innovation, optimize workflows, and scale effectively
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed plus-jakarta-sans-600" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseEnhanceDecisionMaking"
+                                            aria-expanded="false" aria-controls="collapseEnhanceDecisionMaking">
+                                            Enhance Decision-Making
+                                        </button>
+                                    </h3>
+                                    <div id="collapseEnhanceDecisionMaking" class="accordion-collapse collapse"
+                                        data-bs-parent="#insightsAccordion">
+                                        <div class="accordion-body px-4 ">
+                                            <p class="jost-400">
+                                                In today's rapidly evolving digital landscape, AI isn't just an option—it's a necessity. We help organizations harness
+                                                the full potential of AI to drive innovation, optimize workflows, and scale effectively
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item ">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed plus-jakarta-sans-600" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsePersonalizedUserExperience"
+                                            aria-expanded="false" aria-controls="collapsePersonalizedUserExperience">
+                                            Personalized User Experience
+                                        </button>
+                                    </h3>
+                                    <div id="collapsePersonalizedUserExperience" class="accordion-collapse collapse"
+                                        data-bs-parent="#insightsAccordion">
+                                        <div class="accordion-body px-4">
+                                            <p class="jost-400">
+                                                In today's rapidly evolving digital landscape, AI isn't just an option—it's a necessity. We help organizations harness
+                                                the full potential of AI to drive innovation, optimize workflows, and scale effectively
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item ">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed plus-jakarta-sans-600" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseDriveProduct"
+                                            aria-expanded="false" aria-controls="collapseDriveProduct">
+                                            Drive Product Innovation
+                                        </button>
+                                    </h3>
+                                    <div id="collapseDriveProduct" class="accordion-collapse collapse"
+                                        data-bs-parent="#insightsAccordion">
+                                        <div class="accordion-body px-4">
+                                            <p class="jost-400">
+                                                In today's rapidly evolving digital landscape, AI isn't just an option—it's a necessity. We help organizations harness
+                                                the full potential of AI to drive innovation, optimize workflows, and scale effectively
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Accordion End -->
+
+                            <!-- Counters -->
+                            <div
+                                class="insights-counters row g-lg-0 gy-4 flex-column flex-sm-row mt-4  justify-content-between mt-lg-5">
+
+                                <div class="col-sm-3 text-sm-start text-center counter-item">
+                                    <!-- <h2 class="counter-num num-digit-1 bebas-neue-400 border-bottom" data-target="95" data-suffix="%">0
+                                    </h2> -->
+
+                                    <h2 class="num-digit-1 bebas-neue-400 border-bottom">95%
+                                    </h2>
+                                    <h5 class="counter-label jost-500">Operational Efficiency</h5>
+                                </div>
+
+                                <div class="col-sm-3 text-center counter-item">
+                                    <!-- <h2 class="counter-num num-digit-2 bebas-neue-400 border-bottom" data-target="10" data-suffix="x">0
+                                    </h2> -->
+
+                                    <h2 class="num-digit-2 bebas-neue-400 border-bottom">10x</h2>
+                                    <h5 class="counter-label jost-500">Faster Decisions</h5>
+                                </div>
+
+                                <div class="col-sm-3 text-sm-end text-center counter-item">
+                                    <h2 class="num-digit-3 bebas-neue-400 border-bottom">24/7</h2>
+
+                                    <h5 class="counter-label jost-500">Automated Innovation</h5>
+                                </div>
+
+                            </div>
+                            <!-- Counters End -->
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  /*=========================== Company Insights Section End  =========================*/ -->
+
+        <!-- /*=========================== Consulting Process Overview Section  =========================*/ -->
+        <section class="consulting-process-overview container-fluid p-5">
+            <div class="container py-lg-5">
+                <div class="row justify-content-lg-around gap-3 justify-content-between g-5">
+
+                    <!-- Left Section -->
+                    <div class="col-md-6 col-12 p-0">
+                        <h3 class="jost-400 my-3" data-aos="fade-left">— OUR APPROACH</h3>
+                        <h1 class="plus-jakarta-sans-600 m-0 dynamic-typewriter" data-speed="65" data-delay="300" data-threshold="0.2">Our Approach: Tailored AI Solutions</h1>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="col-md-5 col-12 d-flex flex-column justify-content-end gap-2 p-0">
+                        <p class="jost-400" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                                    data-aos-delay="500" data-aos-offset="0" data-aos-duration="2000">We believe that every business is unique, and so are its AI needs. Our team of experts works closely with you to design
+                                    and deploy state-of-the-art technologies</p>
+                        <a href="#" class="get-in-touch jost-500 text-decoration-none">Get In Touch
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 21 21" width="30">
+                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" transform="translate(6 6)">
+                                    <path d="m8.5 7.5v-7h-7"></path>
+                                    <path d="m8.5.5-8 8"></path>
+                                </g>
+                            </svg></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row process-section g-4 justify-content-center mt-5">
+
+                    <div class="col-lg-3 col-md-6 process-item ">
+                        <div class="circle-node-wrapper mx-auto d-flex justify-content-center align-items-center z-2">
+                            <span
+                                class="step-badge plus-jakarta-sans-600 position-absolute d-flex justify-content-center align-items-center">1.</span>
+                            <img src="images/client-discovery.svg" alt="">
+                        </div>
+                        <h4 class="my-3 jost-500">Assess</h4>
+                        <p class="jost-400 ">Assess your current capabilities and challenges.</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 process-item">
+                        <div class="circle-node-wrapper mx-auto d-flex justify-content-center align-items-center z-2">
+                            <span
+                                class="step-badge plus-jakarta-sans-600 position-absolute d-flex justify-content-center align-items-center">2.</span>
+                            <img src="images/diagnos-and-analysis.svg" alt="">
+                        </div>
+                        <h4 class="my-3 jost-500">Design</h4>
+                        <p class="jost-400 ">Design custom AI strategies aligned with your goals</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 process-item">
+                        <div class="circle-node-wrapper mx-auto d-flex justify-content-center align-items-center z-2">
+                            <span
+                                class="step-badge plus-jakarta-sans-600 position-absolute d-flex justify-content-center align-items-center">3.</span>
+                            <img src="images/startegic-development.svg" alt="">
+                        </div>
+                        <h4 class="my-3  jost-500">Implement</h4>
+                        <p class="jost-400 ">Implement scalable solutions using state-of-the-art technologies</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 process-item">
+                        <div class="circle-node-wrapper mx-auto d-flex justify-content-center align-items-center z-2">
+                            <span
+                                class="step-badge plus-jakarta-sans-600 position-absolute d-flex justify-content-center align-items-center">4.</span>
+                            <img src="images/client-communication.svg" alt="">
+                        </div>
+                        <h4 class="my-3 jost-500">Optimize</h4>
+                        <p class="jost-400 ">Optimize performance through continuous learning and adaptation</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- /*=========================== Consulting Process Overview Section End  =========================*/ -->
+
+        <!-- /*=========================== Expertise Section  =========================*/ -->
+        <section class="expertise container-fluid ">
+            <div class="container py-5 py-lg-0">
+                <div class="row g-0 align-items-stretch">
+                    <div class="col-lg-4 col-12 py-5 d-flex flex-column justify-content-evenly">
+                        <div class="expertise-content">
+                            <h3 class="jost-400 my-3" data-aos="fade-left">— OUR EXPERTISE</h3>
+                            <h1 class="plus-jakarta-sans-600 mb-3 dynamic-typewriter"  data-speed="65" data-delay="300" data-threshold="0.2">
+                                Industries We Serve
+                            </h1>
+                            <p class="jost-400" data-aos="fade-zoom-in" data-aos-easing="ease-out"
+                                    data-aos-delay="1000" data-aos-offset="0" data-aos-duration="2000">Empowering diverse sectors with cutting-edge artificial intelligence to solve complex business challenges.</p>
+                        
+                            <button class="all-projects " data-aos="fade-up" data-aos-easing="ease-in-back"
+                                    data-aos-delay="2000" data-aos-offset="0" data-aos-duration="1500">
+                                <a href="#" class=" jost-500 text-decoration-none">All Projects
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 21 21" width="30">
+                                        <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            transform="translate(6 6)">
+                                            <path d="m8.5 7.5v-7h-7"></path>                                            <path d="m8.5.5-8 8"></path>
+                                        </g>
+                                    </svg></span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-12 p-0">
+                        <div class="swiper expertise-slider h-100" >
+                            <div class="swiper-wrapper h-100" data-aos="fade-left"
+                                data-aos-duration="2000">
+    
+                                <!-- Slider 1 -->
+                                <div class="swiper-slide lp-slide d-flex justify-content-start position-relative overflow-hidden">
+                                    <img src="images/latest-project-slide-1.jpg" alt="Manufacturing">
+                                    <div class="lp-overlay position-absolute z-1"></div>
+                                    <div class="lp-content">
+                                        <a href="#" class="jost-500 lp-title text-decoration-none d-block">Manufacturing</a>
+                                    
+                                        <!-- <span class="jost-500 lp-date">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.5">
+                                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                                <line x1="16" y1="2" x2="16" y2="6" />
+                                                <line x1="8" y1="2" x2="8" y2="6" />
+                                                <line x1="3" y1="10" x2="21" y2="10" />
+                                            </svg>
+                                            June 5, 2024
+                                        </span> -->
+
+                                        <p class="jost-400 small mb-0">Optimizing production lines, predictive maintenance, and smart supply
+                                            chain management through intelligent automation.</p>
+                                    </div>
+                                </div>
+    
+                                <!-- Slider 2 -->
+                                <div class="swiper-slide lp-slide d-flex justify-content-start position-relative overflow-hidden">
+                                    <img src="images/latest-project-slide-2.jpg" alt="Retail and E-commerce">
+                                    <div class="lp-overlay position-absolute z-1"></div>
+                                    <div class="lp-content">
+                                        <a href="#" class="jost-500 lp-title text-decoration-none d-block">Retail and E-commerce</a>
+                                    
+                                        <!-- <span class="jost-500 lp-date">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.5">
+                                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                                <line x1="16" y1="2" x2="16" y2="6" />
+                                                <line x1="8" y1="2" x2="8" y2="6" />
+                                                <line x1="3" y1="10" x2="21" y2="10" />
+                                            </svg>
+                                            June 5, 2024
+                                        </span> -->
+
+                                        <p class="jost-400 small mb-0">Personalized product recommendations, demand forecasting, and automated
+                                            customer support systems.</p>
+                                    </div>
+                                </div>
+    
+                                <!-- Slider 3 -->
+                                <div class="swiper-slide lp-slide d-flex justify-content-start position-relative overflow-hidden">
+                                    <img src="images/latest-project-slide-3.jpg" alt="Healthcare and Life Sciences">
+                                    <div class="lp-overlay position-absolute z-1"></div>
+                                    <div class="lp-content">
+                                        <a href="#" class="jost-500 lp-title text-decoration-none d-block">Healthcare and Life Sciences</a>
+                                    
+                                        <!-- <span class="jost-500 lp-date">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.5">
+                                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                                <line x1="16" y1="2" x2="16" y2="6" />
+                                                <line x1="8" y1="2" x2="8" y2="6" />
+                                                <line x1="3" y1="10" x2="21" y2="10" />
+                                            </svg>
+                                            June 5, 2024
+                                        </span> -->
+
+                                        <p class="jost-400 small mb-0">Accelerating drug discovery, medical imaging analysis, and enhancing patient care diagnostic tools.</p>
+                                    </div>
+                                </div>
+    
+                                <!-- Slider 4 -->
+                                <div class="swiper-slide lp-slide d-flex justify-content-start position-relative overflow-hidden">
+                                    <img src="images/latest-project-slide-4.jpg" alt="Financial Services">
+                                    <div class="lp-overlay position-absolute z-1"></div>
+                                    <div class="lp-content">
+                                        <a href="#" class="jost-500 lp-title text-decoration-none d-block">Financial Services</a>
+                                    
+                                        <!-- <span class="jost-500 lp-date">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.5">
+                                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                                <line x1="16" y1="2" x2="16" y2="6" />
+                                                <line x1="8" y1="2" x2="8" y2="6" />
+                                                <line x1="3" y1="10" x2="21" y2="10" />
+                                            </svg>
+                                            June 5, 2024
+                                        </span> -->
+
+                                        <p class="jost-400 small mb-0">Accelerating drug discovery, medical imaging analysis, and enhancing
+                                            patient care diagnostic tools.</p>
+                                    </div>
+                                </div>
+    
+                                <!-- Slider 5 -->
+                                <div class="swiper-slide lp-slide d-flex justify-content-start position-relative overflow-hidden">
+                                    <img src="images/latest-project-slide-5.jpg" alt="Energy and Utilities">
+                                    <div class="lp-overlay position-absolute z-1"></div>
+                                    <div class="lp-content">
+                                        <a href="#" class="jost-500 lp-title text-decoration-none d-block">Energy and Utilities</a>
+                                    
+                                        <!-- <span class="jost-500 lp-date">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.5">
+                                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                                <line x1="16" y1="2" x2="16" y2="6" />
+                                                <line x1="8" y1="2" x2="8" y2="6" />
+                                                <line x1="3" y1="10" x2="21" y2="10" />
+                                            </svg>
+                                            June 5, 2024
+                                        </span> -->
+
+                                        <p class="jost-400 small mb-0">Smart grid management, predictive asset management, and energy consumption
+                                            optimization models.</p>
+                                    </div>
+                                </div>
+                                <!-- Slider 6 -->
+                                <div class="swiper-slide lp-slide d-flex justify-content-start position-relative overflow-hidden">
+                                    <img src="images/latest-project-slide-4.jpg" alt="Media and Entertainment">
+                                    <div class="lp-overlay position-absolute z-1"></div>
+                                    <div class="lp-content">
+                                        <a href="#" class="jost-500 lp-title text-decoration-none d-block">Media and Entertainment</a>
+                                    
+                                        <!-- <span class="jost-500 lp-date">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.5">
+                                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                                <line x1="16" y1="2" x2="16" y2="6" />
+                                                <line x1="8" y1="2" x2="8" y2="6" />
+                                                <line x1="3" y1="10" x2="21" y2="10" />
+                                            </svg>
+                                            June 5, 2024
+                                        </span> -->
+
+                                        <p class="jost-400 small mb-0">Automated content generation, smart metadata tagging, and hyper-targeted
+                                            audience analytics.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Vertical pagination — bottom right -->
+                            <div class="swiper-pagination jost-600"></div>
+                        
+                            <!-- PREV / NEXT — bottom left -->
+                            <div class="expertise-arrows">
+                                <button class="expertise-prev jost-400">Prev</button>
+                                <!-- <div class="arrow-divider"></div> -->
+                                <button class="expertise-next jost-400">Next</button>
+                            </div>
+                        
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /*=========================== Expertise Section End  =========================*/ -->
+
+        <!-- /*=========================== Latest News Updates Section  =========================*/ -->
+        <!-- <section class="latest-news-updates container-fluid pt-5">
+            <div class="container py-lg-5 mb-3 px-4">
+                <div class="row gap-5 justify-content-between">
+                
+                    <div class="col-md-4 col-12 p-0">
+                        <h3 class="jost-400 mb-2" data-aos="fade-left">Latest News</h3>
+                        <h1 class="plus-jakarta-sans-600 m-0 dynamic-typewriter" data-speed="65" data-delay="300" data-threshold="0.2">
+                            Explore the Latest News Updates</h1>
+                    </div>
+                
+                    <div class="col-md-5 col-12 d-flex flex-column justify-content-center gap-2 p-0">
+                        <p class="jost-400" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"
+                            data-aos-duration="2000">Stay informed with our latest updates. Join us for insights and announcements. RSVP
+                            now!</p>
+                        <a href="#" class="view-fresh-news jost-500 text-decoration-none">Very Fresh News
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 21 21" width="30">
+                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    transform="translate(6 6)">
+                                    <path d="m8.5 7.5v-7h-7"></path>
+                                    <path d="m8.5.5-8 8"></path>
+                                </g>
+                            </svg></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-lg-4 row-cols-2">
+                <div class="col p-0 ">
+                    <div class="latest-news-card">
+                        <img src="images/latest-news-update-card-1.jpg" class="img-fluid object-fit-cover" alt="">
+                    
+                        <div class="nc-overlay"></div>
+                        <div class="nc-date-block text-end">
+                            <a href="#" class="m-0 jost-400 text-decoration-none">5 Jun</a>
+                        </div>
+                    
+                        <div class="nc-content">
+                            <a href="#" class="nc-category jost-400 text-decoration-none">
+                                <span class="nc-cat-text">News</span>
+                                <span class="nc-divider">/</span>
+                                <span class="nc-cat-text">pixelwars</span>
+                            </a>
+                            <a href="#" class="nc-title plus-jakarta-sans-600 text-decoration-none">Innovation Updates</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col p-0">
+                    <div class="latest-news-card">
+                        <img src="images/latest-news-update-card-2.jpg" class="img-fluid object-fit-cover" alt="">
+                    
+                        <div class="nc-overlay"></div>
+                    
+                        <div class="nc-date-block text-end">
+                            <a href="#" class="m-0 jost-400 text-decoration-none">5 Jun</a>
+                        </div>
+                    
+                        <div class="nc-content">
+                            <a href="#" class="nc-category jost-400 text-decoration-none">
+                                <span class="nc-cat-text">Insights</span>
+                                <span class="nc-divider">/</span>
+                                <span class="nc-cat-text">pixelwars</span>
+                            </a>
+                            <a href="#" class="nc-title plus-jakarta-sans-600 text-decoration-none">Risk Assessment</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col p-0">
+                    <div class="latest-news-card">
+                        <img src="images/latest-news-update-card-3.jpg" class="img-fluid object-fit-cover" alt="">
+                    
+                        <div class="nc-overlay"></div>
+                    
+                        <div class="nc-date-block text-end">
+                            <a href="#" class="m-0 jost-400 text-decoration-none">5 Jun</a>
+                        </div>
+
+                        <div class="nc-content">
+                            <a href="#" class="nc-category jost-400 text-decoration-none">
+                                <span class="nc-cat-text">News</span>
+                                <span class="nc-divider">/</span>
+                                <span class="nc-cat-text">pixelwars</span>
+                            </a>
+                            <a href="#" class="nc-title plus-jakarta-sans-600 text-decoration-none">Leadership Changes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col p-0">
+                    <div class="latest-news-card">
+                        <img src="images/latest-news-update-card-4.jpg" class="img-fluid object-fit-cover" alt="">
+                    
+                        <div class="nc-overlay"></div>
+                    
+                        <div class="nc-date-block text-end">
+                            <a href="#" class="m-0 jost-400 text-decoration-none">5 Jun</a>
+                        </div>
+                    
+                        <div class="nc-content">
+                            <a href="#" class="nc-category jost-400 text-decoration-none">
+                                <span class="nc-cat-text">News</span>
+                                <span class="nc-divider">/</span>
+                                <span class="nc-cat-text">pixelwars</span>
+                            </a>
+                            <a href="#" class="nc-title plus-jakarta-sans-600 text-decoration-none">Global Market</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- /*=========================== Latest News Updates Section End  =========================*/ -->
+
+        <!-- /*=========================== Testimonial Section  =========================*/ -->
+        <section class="why-choose-section  container-fluid py-5">
+            <div class="container pt-lg-5 py-4">
+                <div class="row justify-content-lg-around gap-3 justify-content-between mb-5 g-5 px-3">
+                
+                    <!-- Left Section -->
+                    <div class="col-md-6 col-sm-9 p-0">
+                        <h3 class="jost-400 mb-2" data-aos="fade-left">— WHY INTELLIFY</h3>
+                        <h1 class="plus-jakarta-sans-600 m-0 dynamic-typewriter" data-speed="65" data-delay="300" data-threshold="0.2">
+                            Why Choose Intellify?</h1>
+                    </div>
+                
+                    <!-- Right Section -->
+                    <div class="col-md-5 col-12 d-flex flex-column justify-content-center p-0">
+                        <p class="jost-400" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"
+                            data-aos-duration="2000">We are constantly exploring the frontiers of AI technology to bring you the most advanced solutions, acting as your
+                            dedicated partner from strategy to scale.</p>
+                        <a href="#" class="get-in-touch jost-500 text-decoration-none">Get In Touch
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 21 21" width="30">
+                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    transform="translate(6 6)">
+                                    <path d="m8.5 7.5v-7h-7"></path>
+                                    <path d="m8.5.5-8 8"></path>
+                                </g>
+                            </svg></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row justify-content-between pt-5">
+                    
+                    <div class="why-choose-slider-wrap mb-5">
+                
+                        <div class="swiper why-choose-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="why-choose-cards h-100">
+                                        <!-- <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 190.5 148"
+                                            xml:space="preserve">
+                                            <g>
+                                                <path fill="currentColor"
+                                                    d="M37.7,146.3L2.1,124.6C19.3,100,28.2,74.1,28.8,46.7V2.3H90v38.8c0,19.3-5,38.8-15.1,58.4C64.9,119,52.5,134.6,37.7,146.3z M133.7,146.3l-35.6-21.7c17.2-24.5,26.2-50.5,26.8-77.9V2.3h61.2v38.8c0,19.3-5,38.8-15.1,58.4C160.9,119,148.5,134.6,133.7,146.3z">
+                                                </path>
+                                            </g>
+                                        </svg> -->
+                                    
+                                        <p class="jost-400">Our team comprises world-class AI researchers and engineers with a track record of delivering impactful solutions.</p>
+                                    
+                                        <div class="why-choose-user-info d-flex align-items-center gap-3">
+                                            <!-- <div class="user-avatar">
+                                                <img src="images/why-choose-section-client-1.jpg" alt="James Clark" class="object-fit-cover" width="150"
+                                                    height="150">
+                                            </div> -->
+                                            <div class="user-meta">
+                                                <h5 class="user-name jost-400 mb-0">Proven Expertise</h5>
+                                                <span class="user-designation jost-400 mt-0">Core AI Research & Engineering</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="why-choose-cards h-100">
+                                        <!-- <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 190.5 148"
+                                            xml:space="preserve">
+                                            <g>
+                                                <path fill="currentColor"
+                                                    d="M37.7,146.3L2.1,124.6C19.3,100,28.2,74.1,28.8,46.7V2.3H90v38.8c0,19.3-5,38.8-15.1,58.4C64.9,119,52.5,134.6,37.7,146.3z M133.7,146.3l-35.6-21.7c17.2-24.5,26.2-50.5,26.8-77.9V2.3h61.2v38.8c0,19.3-5,38.8-15.1,58.4C160.9,119,148.5,134.6,133.7,146.3z">
+                                                </path>
+                                            </g>
+                                        </svg> -->
+                                    
+                                        <p class="jost-400">From strategy to implementation and beyond, we're your dedicated partner throughout your AI journey.</p>
+                                    
+                                        <div class="why-choose-user-info d-flex align-items-center gap-3">
+                                            <!-- <div class="user-avatar">
+                                                <img src="images/why-choose-section-client-2.jpg" alt="Jennifer Dust" class="object-fit-cover" width="150"
+                                                    height="150">
+                                            </div> -->
+                                            <div class="user-meta">
+                                                <h5 class="user-name jost-400 mb-0">End-to-End Support</h5>
+                                                <span class="user-designation jost-400 mt-0">Strategy, Deployment & Beyond</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="why-choose-cards h-100">
+                                        <!-- <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 190.5 148"
+                                            xml:space="preserve">
+                                            <g>
+                                                <path fill="currentColor"
+                                                    d="M37.7,146.3L2.1,124.6C19.3,100,28.2,74.1,28.8,46.7V2.3H90v38.8c0,19.3-5,38.8-15.1,58.4C64.9,119,52.5,134.6,37.7,146.3z M133.7,146.3l-35.6-21.7c17.2-24.5,26.2-50.5,26.8-77.9V2.3h61.2v38.8c0,19.3-5,38.8-15.1,58.4C160.9,119,148.5,134.6,133.7,146.3z">
+                                                </path>
+                                            </g>
+                                        </svg> -->
+                                    
+                                        <p class="jost-400">Our AI systems are designed to grow with your business, adapting seamlessly to new challenges and business
+                                        opportunities.</p>
+                                    
+                                        <div class="why-choose-user-info d-flex align-items-center gap-3">
+                                            <!-- <div class="user-avatar">
+                                                <img src="images/why-choose-section-client-3.jpg" alt="Adam Hills" class="object-fit-cover" width="150"
+                                                    height="150">
+                                            </div> -->
+                                            <div class="user-meta">
+                                                <h5 class="user-name jost-400 mb-0">Scalable Solutions</h5>
+                                                <span class="user-designation jost-400 mt-0">Adaptive Frameworks & Growth</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="why-choose-cards h-100">
+                                        <!-- <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 190.5 148"
+                                            xml:space="preserve">
+                                            <g>
+                                                <path fill="currentColor"
+                                                    d="M37.7,146.3L2.1,124.6C19.3,100,28.2,74.1,28.8,46.7V2.3H90v38.8c0,19.3-5,38.8-15.1,58.4C64.9,119,52.5,134.6,37.7,146.3z M133.7,146.3l-35.6-21.7c17.2-24.5,26.2-50.5,26.8-77.9V2.3h61.2v38.8c0,19.3-5,38.8-15.1,58.4C160.9,119,148.5,134.6,133.7,146.3z">
+                                                </path>
+                                            </g>
+                                        </svg> -->
+                                    
+                                        <p class="jost-400">We're constantly exploring the frontiers of AI technology to bring you the most advanced solutions available in the
+                                        industry.</p>
+                                    
+                                        <div class="why-choose-user-info d-flex align-items-center gap-3">
+                                            <!-- <div class="user-avatar">
+                                                <img src="images/why-choose-section-client-4.jpg" alt="Jennifer Dust" class="object-fit-cover" width="150"
+                                                    height="150">
+                                            </div> -->
+                                            <div class="user-meta">
+                                                <h5 class="user-name jost-400 mb-0">Commitment to Innovation</h5>
+                                                <span class="user-designation jost-400 mt-0">Exploring Future Frontiers</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                
+                        
+                        <button class="why-choose-slider-prev d-lg-block d-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.2 32.3" xml:space="preserve">
+                                <line x1="0.5" y1="16" x2="33.5" y2="16"></line>
+                                <line x1="0.3" y1="16.5" x2="16.2" y2="0.7"></line>
+                                <line x1="0" y1="15.4" x2="16.2" y2="31.6"></line>
+                            </svg>
+                        </button>
+                
+                        <button class="why-choose-slider-next d-lg-block d-none">
+                            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.2 32.3" xml:space="preserve">
+                                <line x1="33.7" y1="16" x2="0.7" y2="16"></line>
+                                <line x1="33.9" y1="16.5" x2="18" y2="0.7"></line>
+                                <line x1="34.2" y1="15.4" x2="18" y2="31.6"></line>
+                            </svg>
+                        </button>
+                
+                    </div>
+                
+                    <!-- Pagination row ke bahar -->
+                    <div class="mt-4 why-choose-slider-pagination d-flex justify-content-center align-items-center"></div>
+                </div>
+            </div>
+        </section>
+        <!-- /*=========================== Testimonial Section End  =========================*/ -->
+
+        <!-- /*=========================== Team Section  =========================*/ -->
+         <!-- <section class="team container-fluid p-5 ">
+            <div class="container py-5">
+                <div class="row justify-content-between g-5 px-4">
+                
+
+                    <div class="col-md-6 col-12 p-0">
+                        <h3 class="jost-400 mb-2" data-aos="fade-left">Our Team</h3>
+                        <h1 class="plus-jakarta-sans-600 m-0 dynamic-typewriter" data-speed="65" data-delay="300" data-threshold="0.2">
+                            Meet Our Expert Consulting Team.</h1>
+                    </div>
+                
+                    <div class="col-md-5 col-12 d-flex flex-column justify-content-center p-0">
+                        <p class="jost-400" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"
+                            data-aos-duration="2000">Meet our expert team. Join us for an insightful session. RSVP now!</p>
+                        <a href="#" class="work-with-us jost-500 text-decoration-none">Work with Us
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 21 21" width="30">
+                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    transform="translate(6 6)">
+                                    <path d="m8.5 7.5v-7h-7"></path>
+                                    <path d="m8.5.5-8 8"></path>
+                                </g>
+                            </svg></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row row-cols-sm-2 row-cols-1 row-cols-lg-4 pt-5 gy-5 g-lg-5">
+                    <div class="col p-lg-3">
+                        <div class="team-profile-card h-100 position-relative overflow-hidden d-block">
+                            <div class="tc-image-wrapper overflow-hidden">
+                                <img src="images/team-profile-1.jpg" alt="Ava Collins" class="img-fluid object-fit-cover d-block">
+                            </div>
+                        
+                            <div class="tc-info position-absolute bottom-0 start-0 z-2 w-100">
+                                <div class="tc-info-inner p-lg-4 p-3">
+                                    <h4 class="user-name jost-500 mb-1">Ava Collins</h4>
+                                    <span class="user-designation jost-400 mb-sm-3 mb-1 d-block">Team Manager</span>
+                        
+                                    <div class="tc-socials d-flex gap-lg-3 gap-2">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="#" class="social-link">
+                                            <i class="far fa-envelope"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-lg-3">
+                        <div class="team-profile-card h-100 position-relative overflow-hidden d-block">
+                            <div class="tc-image-wrapper overflow-hidden">
+                                <img src="images/team-profile-2.jpg" alt="James Taylor" class="img-fluid object-fit-cover d-block">
+                            </div>
+                        
+                            <div class="tc-info position-absolute bottom-0 start-0 z-2 w-100">
+                                <div class="tc-info-inner p-lg-4 p-3">
+                                    <h4 class="user-name jost-500 mb-1">James Taylor</h4>
+                                    <span class="user-designation jost-400 mb-sm-3 mb-1 d-block">Team Manager</span>
+                        
+                                    <div class="tc-socials d-flex gap-lg-3 gap-2">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="#" class="social-link">
+                                            <i class="far fa-envelope"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-lg-3">
+                        <div class="team-profile-card h-100 position-relative overflow-hidden d-block">
+                            <div class="tc-image-wrapper overflow-hidden">
+                                <img src="images/team-profile-3.jpg" alt="Emily Coopers" class="img-fluid object-fit-cover d-block">
+                            </div>
+                        
+                            <div class="tc-info position-absolute bottom-0 start-0 z-2 w-100">
+                                <div class="tc-info-inner p-lg-4 p-3">
+                                    <h4 class="user-name jost-500 mb-1">Emily Coopers</h4>
+                                    <span class="user-designation jost-400 mb-sm-3 mb-1 d-block">Team Manager</span>
+                        
+                                    <div class="tc-socials d-flex gap-lg-3 gap-2">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="#" class="social-link">
+                                            <i class="far fa-envelope"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-lg-3">
+                        <div class="team-profile-card h-100 position-relative overflow-hidden d-block">
+                            <div class="tc-image-wrapper overflow-hidden">
+                                <img src="images/team-profile-4.jpg" alt="Camile Dubois" class="img-fluid object-fit-cover d-block">
+                            </div>
+                        
+                            <div class="tc-info position-absolute bottom-0 start-0 z-2 w-100">
+                                <div class="tc-info-inner p-lg-4 p-3">
+                                    <h4 class="user-name jost-500 mb-1">Camile Dubois</h4>
+                                    <span class="user-designation jost-400 mb-sm-3 mb-1 d-block">Team Manager</span>
+                        
+                                    <div class="tc-socials d-flex gap-lg-3 gap-2">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="#" class="social-link">
+                                            <i class="far fa-envelope"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+         </section> -->
+        <!-- /*=========================== Team Section End =========================*/ -->
+
+        <!-- /*=========================== Collaboration Section  =========================*/ -->
+        <section class="collaboration-section container-fluid d-flex justify-content-center align-items-center">
+        
+            <video autoplay loop muted playsinline class="collaboration-bg-video">
+                <source src="images/collaboration-section-video.mp4" type="video/mp4">
+                <img src="images/bc3be4.jpg" alt="Collaboration Fallback">
+            </video>
+        
+            <div class="collaboration-video-overlay"></div>
+        
+            <div class="container h-100 position-relative z-3 ">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 col-md-11 collaboration-video-content">
+        
+                        <!-- <h4 class="jost-400 collaboration-subtitle  mb-4">— COLLABORATION</h4> -->
+
+                        <h1 class="plus-jakarta-sans-600 m-0 collaboration-title mb-4 dynamic-typewriter" data-speed="65" data-delay="300" data-threshold="0.2">
+                            Ready to Transform Your Business with AI?</h1>
+        
+                        <h3 class="collaboration-description mb-4 jost-400">
+                            Let's embark on your <strong class="jost-500" style="color: rgba(255, 255, 255, 0.77);">AI journey</strong> together. Contact us today to schedule a consultation and discover how Intellify can
+                            help you unlock the full potential of artificial intelligence.
+
+                              
+                        </h3>
+
+                        <button class="collaboration-lets-talk-btn  ">
+                            <a href="contact.html" class=" jost-500 text-decoration-none">Get Started with AI
+                                <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 21 21" width="30">
+                                    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        transform="translate(6 6)">
+                                        <path d="m8.5 7.5v-7h-7"></path>
+                                        <path d="m8.5.5-8 8"></path>
+                                    </g>
+                                </svg></span>
+                            </a>
+                        </button>
+        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /*=========================== Collaboration Section End  =========================*/ -->
+    </main>
+    <!-- Main Content End -->
+
+    <!-- /* =========================== Footer Section ========================= */ -->
+    <footer class="container-fluid p-3">
+        <div class="container text-center">
+            <p class="footer-text jost-700 m-0">© 2026 ALL RIGHTS RESERVED | INTELLIFY AI</p>
+        </div>
+    </footer>
+    <!-- /* =========================== Footer Section End ========================= */ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>AOS.init(
+            {
+                once: true
+            }
+        );</script>
+
+</body>
+
+</html>
