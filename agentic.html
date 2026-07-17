@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Agentic AI — Intellify</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="images/intellify-logo.png?v=1" type="image/png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Caveat:wght@400..700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Mono:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HU&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="agentic-ai">
+
+    <!-- /*=========================== Main Navbar =========================*/ -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-transparent has-scroll-effect" id="mainNavbar">
+        <div class="container-lg py-2 px-2">
+            <!-- Navbar Title -->
+            <a class="navbar-brand syncopate-700 text-uppercase fs-lg-4 fs-5" href="index.html">
+                <img src="images/intellify-logo.png" alt="Intellify Logo" class="img-fluid" height="50"
+                    style="height: 50px; width: auto;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border: none; box-shadow: none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+
+                <!-- Off canvas Title (below: 992px) -->
+                <div class="offcanvas-header">
+                    <a class="navbar-brand syncopate-700 text-uppercase fs-lg-4 fs-5" href="index.html">
+                        <img src="images/intellify-logo.png" alt="Intellify Logo" class="img-fluid" height="50"
+                            style="height: 50px; width: auto;">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body d-lg-flex justify-content-between align-items-center">
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 align-items-lg-center flex-wrap gap-3">
+                        <li class="nav-item jost-500"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" aria-current="page" href="about.html">About</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="industries.html">Industries</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link active" href="agentic.html">Agentic AI</a></li>
+                        <!-- <li class="nav-item jost-500"><a class="nav-link" href="#">News</a></li> -->
+                        <li class="nav-item jost-500"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <!-- End -->
+
+                    <!-- /* Search and Talk Button on Navbar */ -->
+                    <!-- <span class="d-block d-lg-none">SEARCH FOR</span> -->
+                    <div class="nav-right-actions d-flex align-items-center ms-lg-3 position-relative">
+                        <a href="contact.html" class="btn-talk jost-500 text-decoration-none" id="letsTalkBtn">LET'S TALK!</a>
+                        <form class="search-wrapper" id="searchWrapper" role="search">
+                            <input class="search-input jost-400" type="search" placeholder="type and search"
+                                aria-label="Search" id="searchInput" />
+                            <button class="search-action-btn" type="submit" aria-label="Submit Search">
+                                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                            </button>
+                            <button class="close-btn" type="button" id="closeSearchBtn" aria-label="Close Search">
+                                <i class="fas fa-times fa-lg"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- End -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- /*=========================== Main Navbar End =========================*/ -->
+    
+    <main>
+        <!-- /*=========================================== Agentic AI Hero Section ==================================================*/ -->
+        <section class="agentic-hero-section position-relative overflow-hidden d-flex align-items-center justify-content-center">
+            <div class="agentic-hero-section-bg position-absolute w-100 h-100 start-0 top-0 z-1">
+                <img src="images/about-hero-section.jpg" class="object-fit-cover object-view-center" alt="About Us Background">
+            </div>
+        
+            <div class="agentic-hero-section-overlay"></div>
+        
+            <div class="container position-relative z-3">
+                <div class="row align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 agentic-hero-section-content">
+                        <h1 class="plus-jakarta-sans-600 mb-3 reveal-text" data-duration="0.8s">Agentic AI</h1>
+                        <h6 class="jost-400 m-0" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100"
+                            data-aos-offset="0" data-aos-duration="1000">IntellifyAI: Pioneering AI Solutions for Tomorrow's Challenges</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /*=========================================== Agentic AI Hero Section End ==================================================*/ -->
+
+
+        <!-- /*=========================================== Agentic Overview Section ==================================================*/ -->
+        <section class="agentic-overview-section container-fluid py-5">
+            <div class="container">
+                <div class="row align-items-center gy-5 gy-lg-0">
+                    <div class="col-lg-6 col-12 agentic-overview-text ">
+                        <p class="jost-400 mb-2">
+                            IntellifyAI specializes in developing sophisticated AI Voice Agents that completely transform call center operations.
+                            Our solutions replace traditional multi-agent workflows with intelligent automation, reducing operational costs by up to
+                            70% while maintaining superior service quality.
+                        </p>
+                        <ul class="list">
+                            <li class="jost-400">Handle 1000+ simultaneous calls per agent</li>
+                            <li class="jost-400">24/7 operations with unlimited scalability</li>
+                            <li class="jost-400">60-80% reduction in operational costs</li>
+                            <li class="jost-400">Multilingual support (English, Urdu, Arabic, Spanish, German, French, etc.)</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                        <img src="images/about-mission-img.jpg" alt="Agentic Overview Section" class="img-fluid w-100 object-fit-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /*=========================================== Agentic Overview Section End ==================================================*/ -->
+
+        <!-- /* ============= Agentic AI Accordion Showcase Section =================== */ -->
+        <section class="agentic-ai-accordion-section py-5 bg-white">
+            <div class="container px-4 px-lg-0">
+                <div class="row gy-5 gy-lg-0">
+        
+                    <!-- Left Side: Image Block & Bottom Label Content -->
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                        <img src="images/about-mission-img.jpg" alt="Agentic Overview Section" class="img-fluid w-100 object-fit-cover"
+                            loading="lazy">
+                    </div>
+        
+                    <!-- Right Side: Custom Accordion Component Module -->
+                    <div class="col-lg-6 col-12 p-lg-5">
+                        <!-- 🔥 Parent container par custom class apply kar di hai -->
+                        <div class="accordion agentic-ai-accordion" id="servicesAccordion">
+                    
+                            <!-- Accordion Item 1: Fronter/Opener AI Agent (Open by default) -->
+                            <div class="accordion-item border-0 border-bottom">
+                                <h2 class="accordion-header" id="fronter-open-ai">
+                                    <!-- 🔥 Custom active class 'agentic-ai-accordion-button' added -->
+                                    <button
+                                        class="accordion-button agentic-ai-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#fronter-open-ai-collapse" aria-expanded="true"
+                                        aria-controls="fronter-open-ai-collapse">
+                                        Fronter/Opener AI Agent
+                                        <!-- 🔥 Custom indicator class 'agentic-ai-accordion-icon-box' added -->
+                                        <span class="agentic-ai-accordion-icon-box"></span>
+                                    </button>
+                                </h2>
+                                <div id="fronter-open-ai-collapse" class="accordion-collapse collapse show" aria-labelledby="fronter-open-ai"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body px-0 jost-400 pb-2">
+                                        <ul>
+                                            <li>"The Lead Qualifier"<br>
+                                                Initial contact, rapport building, and lead
+                                            qualification</li>
+                                            <li>Natural conversation and trust establishment</li>
+                                            <li>Multi-criteria lead qualification</li>
+                                            <li>Real-time CRM updates</li>
+                                        </ul>
+
+                                        <p>Seamless handoff to verification agents</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Accordion Item 2: Verifier AI Agent -->
+                            <div class="accordion-item border-0 border-bottom">
+                                <h2 class="accordion-header" id="verifier-ai-agent">
+                                    <!-- 🔥 Custom active class 'agentic-ai-accordion-button' added -->
+                                    <button
+                                        class="accordion-button collapsed agentic-ai-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#verifier-ai-agent-collapse" aria-expanded="false"
+                                        aria-controls="verifier-ai-agent-collapse">
+                                        Verifier AI Agent
+                                        <!-- 🔥 Custom indicator class 'agentic-ai-accordion-icon-box' added -->
+                                        <span class="agentic-ai-accordion-icon-box"></span>
+                                    </button>
+                                </h2>
+                                <div id="verifier-ai-agent-collapse" class="accordion-collapse collapse" aria-labelledby="verifier-ai-agent"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body px-0 jost-400 pb-2">
+                                        <ul>
+                                            <li>"The Detail Validator" <br>
+                                                Information verification and compliance checks</li>
+                                            <li>Systematic data verification TCPA compliance and regulatory adherence</li>
+                                            <li>Enhanced data collection protocols</li>
+                                        </ul>
+                                        
+                                        <p>Complete record keeping for audits</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Accordion Item 3: Sale Closer AI Agent -->
+                            <div class="accordion-item border-0 border-bottom">
+                                <h2 class="accordion-header" id="sale-close-ai-agent">
+                                    <!-- 🔥 Custom active class 'agentic-ai-accordion-button' added -->
+                                    <button
+                                        class="accordion-button collapsed agentic-ai-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#sale-close-ai-agent-collapse" aria-expanded="false"
+                                        aria-controls="sale-close-ai-agent-collapse">
+                                        Sale Closer AI Agent
+                                        <!-- 🔥 Custom indicator class 'agentic-ai-accordion-icon-box' added -->
+                                        <span class="agentic-ai-accordion-icon-box"></span>
+                                    </button>
+                                </h2>
+                                <div id="sale-close-ai-agent-collapse" class="accordion-collapse collapse" aria-labelledby="sale-close-ai-agent"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body px-0 jost-400 pb-2">
+                                        <ul>
+                                            <li>"The Conversation Specialist" <br> Final offer presentation and conversion completion</li>
+                                            <li>Professional offer presentation <br> Advanced objection handling with rebuttals</li>
+                                            <li>Urgency creation using customer insights</li>
+                                        </ul>
+                                        
+                                        <p>Complete application processing</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion Item 4: Callback Feedback Agent -->
+                            <div class="accordion-item border-0 border-bottom">
+                                <h2 class="accordion-header" id="callback-agent">
+                                    <!-- 🔥 Custom active class 'agentic-ai-accordion-button' added -->
+                                    <button
+                                        class="accordion-button collapsed agentic-ai-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#callback-agent-collapse" aria-expanded="false"
+                                        aria-controls="ccallback-agent-collapse">
+                                        Callback/Feedback Agent
+                                        <!-- 🔥 Custom indicator class 'agentic-ai-accordion-icon-box' added -->
+                                        <span class="agentic-ai-accordion-icon-box"></span>
+                                    </button>
+                                </h2>
+                                <div id="callback-agent-collapse" class="accordion-collapse collapse" aria-labelledby="callback-agent"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body px-0 jost-400 pb-2">
+                                        <ul>
+                                            <li>"The Persistent Follow-up"<br>
+                                            Automated scheduling and intelligent follow-ups</li>
+                                            <li>Smart scheduling based on preferences
+                                            Progressive engagement building</li>
+                                        </ul>
+                                        
+                                        <p>Multiple scenario handling<br>
+                                        Time zone intelligence</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        <!-- /* ============= Agentic AI Accordion Showcase Section End =================== */ -->
+
+        <!-- /* ============= Agentic AI Accordion Showcase Section 2 =================== */ -->
+        <section class="agentic-ai-accordion-section py-5 bg-white">
+            <div class="container px-4 px-lg-0">
+                <div class="row gy-5 gy-lg-0 flex-lg-row-reverse">
+        
+                    <!-- Left Side: Image Block & Bottom Label Content -->
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                        <img src="images/about-mission-img.jpg" alt="Agentic Overview Section"
+                            class="img-fluid w-100 object-fit-cover" loading="lazy">
+                    </div>
+        
+                    <!-- Right Side: Custom Accordion Component Module -->
+                    <div class="col-lg-6 col-12 p-lg-5">
+
+                        <div class="accordion agentic-ai-accordion" id="servicesAccordion2">
+                        
+                            <!-- Accordion Item 1: Fronter/Opener AI Agent (Open by default) -->
+                            <div class="accordion-item border-0 border-bottom">
+                                <h2 class="accordion-header" id="quality-assurance-bot">
+                                    <button
+                                        class="accordion-button agentic-ai-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#quality-assurance-bot-collapse"
+                                        aria-expanded="true" aria-controls="quality-assurance-bot-collapse">
+                                        Quality Assurance Bot
+                                        <span class="agentic-ai-accordion-icon-box"></span>
+                                    </button>
+                                </h2>
+                                <!-- 🔥 data-bs-parent ko badal kar unique target id ke sath map kiya hai -->
+                                <div id="quality-assurance-bot-collapse" class="accordion-collapse collapse show"
+                                    aria-labelledby="quality-assurance-bot" data-bs-parent="#servicesAccordion2">
+                                    <div class="accordion-body px-0 jost-400 pb-2">
+                                        <ul>
+                                            <li>Performance analysis and optimization</li>
+                                            <li>Automated quality scoring</li>
+                                            <li>Real-time sentiment analysis</li>
+                                            <li>Compliance monitoring</li>
+                                            <li>Performance benchmarking. Customer Support Agent</li>
+                                            <li>"The 24/7 Helper"</li>
+                                            <li>Handle customer inquiries and support requests</li>
+                                            <li>Instant response to customer queries</li>
+                                            <li>Knowledge base integration</li>
+                                            <li>Ticket creation and tracking</li>
+                                            <li>Escalation to human agents when needed</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Accordion Item 2: Customer Support Agent -->
+                            <div class="accordion-item border-0 border-bottom">
+                                <h2 class="accordion-header" id="customer-support-agent">
+                                    <button
+                                        class="accordion-button collapsed agentic-ai-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#customer-support-agent-collapse"
+                                        aria-expanded="false" aria-controls="customer-support-agent-collapse">
+                                        Customer Support Agent
+                                        <span class="agentic-ai-accordion-icon-box"></span>
+                                    </button>
+                                </h2>
+                                <!-- 🔥 data-bs-parent ko badal kar unique target id ke sath map kiya hai -->
+                                <div id="customer-support-agent-collapse" class="accordion-collapse collapse"
+                                    aria-labelledby="customer-support-agent" data-bs-parent="#servicesAccordion2">
+                                    <div class="accordion-body px-0 jost-400 pb-2">
+                                        <ul>
+                                            <li>"The 24/7 Helper"</li>
+                                            <li>Handle customer inquiries and support requests</li>
+                                            <li>Instant response to customer queries</li>
+                                            <li>Knowledge base integration</li>
+                                            <li>Ticket creation and tracking</li>
+                                            <li>Escalation to human agents when needed</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        <!-- /* ============= Agentic AI Accordion Showcase Section End =================== */ -->
+
+        <!-- /* ============= Agentic AI Accordion Showcase Section 3 =================== */ -->
+        <section class="agentic-ai-accordion-section py-5 bg-white">
+            <div class="container px-4 px-lg-0">
+                <div class="row gy-5 gy-lg-0">
+        
+                    <!-- Left Side: Image Block & Bottom Label Content -->
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                        <img src="images/about-mission-img.jpg" alt="Agentic Overview Section"
+                            class="img-fluid w-100 object-fit-cover" loading="lazy">
+                    </div>
+        
+                    <!-- Right Side: Custom Accordion Component Module -->
+                    <div class="col-lg-6 col-12 p-lg-5">
+
+                        <div class="accordion agentic-ai-accordion" id="servicesAccordion3">
+                        
+                            <!-- Accordion Item 1: Health Care/Pharmacy (Open by default) -->
+                            <div class="accordion-item border-0 border-bottom">
+                                <h2 class="accordion-header" id="health-care-pharmacy">
+                                    <button
+                                        class="accordion-button agentic-ai-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#health-care-pharmacy-collapse"
+                                        aria-expanded="true" aria-controls="health-care-pharmacy-collapse">
+                                        Health Care/Pharmacy
+                                        <span class="agentic-ai-accordion-icon-box"></span>
+                                    </button>
+                                </h2>
+                                <!-- 🔥 data-bs-parent ko badal kar unique target id ke sath map kiya hai -->
+                                <div id="health-care-pharmacy-collapse" class="accordion-collapse collapse show"
+                                    aria-labelledby="health-care-pharmacy" data-bs-parent="#servicesAccordion3">
+                                    <div class="accordion-body px-0 jost-400 pb-2">
+                                        <ul>
+                                            <li>Campaigns</li>
+                                            <li>HIPAA-compliant processing</li>
+                                            <li>Medication qualification (6+ daily medications)</li>
+                                            <li>Insurance verification (excluding TriCare/Humana)</li>
+                                            <li>Empathetic customer engagment</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Accordion Item 2: Truck Dispatch Services -->
+                            <div class="accordion-item border-0 border-bottom">
+                                <h2 class="accordion-header" id="truck-dispatch-services">
+                                    <button
+                                        class="accordion-button collapsed agentic-ai-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#truck-dispatch-services-collapse"
+                                        aria-expanded="false" aria-controls="truck-dispatch-services-collapse">
+                                        Truck Dispatch Services
+                                        <span class="agentic-ai-accordion-icon-box"></span>
+                                    </button>
+                                </h2>
+                                <div id="truck-dispatch-services-collapse" class="accordion-collapse collapse"
+                                    aria-labelledby="truck-dispatch-services" data-bs-parent="#servicesAccordion3">
+                                    <div class="accordion-body px-0 jost-400 pb-2">
+                                        <ul>
+                                            <li>Owner-operator qualification</li>
+                                            <li>Fleet size assessment(1-5 trucks)</li>
+                                            <li>Load type specialization</li>
+                                            <li>DOT/MC number verification</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 3: Financial Services -->
+                            <div class="accordion-item border-0 border-bottom">
+                                <h2 class="accordion-header" id="financial-services">
+                                    <button
+                                        class="accordion-button collapsed agentic-ai-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#financial-services-collapse"
+                                        aria-expanded="false" aria-controls="financial-services-collapse">
+                                        Financial Services
+                                        <span class="agentic-ai-accordion-icon-box"></span>
+                                    </button>
+                                </h2>
+                                <div id="financial-services-collapse" class="accordion-collapse collapse"
+                                    aria-labelledby="financial-services" data-bs-parent="#servicesAccordion3">
+                                    <div class="accordion-body px-0 jost-400 pb-2">
+                                        <ul>
+                                            <li>Compliance-first approach</li>
+                                            <li>Lead qualification and verification</li>
+                                            <li>Appointment scheduling</li>
+                                            <li>Sensitive data handling</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 4: Real Estate -->
+                            <div class="accordion-item border-0 border-bottom">
+                                <h2 class="accordion-header" id="real-estate">
+                                    <button
+                                        class="accordion-button collapsed agentic-ai-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#real-estate-collapse"
+                                        aria-expanded="false" aria-controls="real-estate-collapse">
+                                        Real Estate
+                                        <span class="agentic-ai-accordion-icon-box"></span>
+                                    </button>
+                                </h2>
+                                <div id="real-estate-collapse" class="accordion-collapse collapse"
+                                    aria-labelledby="real-estate" data-bs-parent="#servicesAccordion3">
+                                    <div class="accordion-body px-0 jost-400 pb-2">
+                                        <ul>
+                                            <li>Property interest qualification</li>
+                                            <li>Appointment booking</li>
+                                            <li>Follow-up automation</li>
+                                            <li>CRM Integration</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 5: E-commerce Stores -->
+                            <div class="accordion-item border-0 border-bottom">
+                                <h2 class="accordion-header" id="ecommerce-stores">
+                                    <button
+                                        class="accordion-button collapsed agentic-ai-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#ecommerce-stores-collapse"
+                                        aria-expanded="false" aria-controls="ecommerce-stores-collapse">
+                                        E-commerce Stores
+                                        <span class="agentic-ai-accordion-icon-box"></span>
+                                    </button>
+                                </h2>
+                                <div id="ecommerce-stores-collapse" class="accordion-collapse collapse"
+                                    aria-labelledby="ecommerce-stores" data-bs-parent="#servicesAccordion3">
+                                    <div class="accordion-body px-0 jost-400 pb-2">
+                                        <ul>
+                                            <li>Order inquiries and tracking</li>
+                                            <li>Product recommendations</li>
+                                            <li>Return/refund processing</li>
+                                            <li>Customer onboarding</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        <!-- /* ============= Agentic AI Accordion Showcase Section End =================== */ -->
+
+
+        <!-- /*=========================== Implementation Process Overview Section  =========================*/ -->
+        <section class="implementation-process-overview container-fluid py-5">
+            <div class="container py-lg-5">
+                <div class="row g-5">
+        
+                    <!-- Left Section -->
+
+                    <div class="col-md-7 col-12">
+                        <h1 class="plus-jakarta-sans-600 mb-4 dynamic-typewriter" data-speed="65" data-delay="300">Implementation Process</h1>
+                        <!-- <h2 class="jost-400 mb-0" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100"
+                            data-aos-offset="0" data-aos-duration="1000">Navigating Challenges,
+                            Creating Opportunities</h2> -->
+                    </div>
+        
+                    <!-- Right Section -->
+                    <!-- <div class="col-md-5 col-12 d-flex flex-column justify-content-end gap-2 p-0">
+                        <p class="jost-400" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500"
+                            data-aos-offset="0" data-aos-duration="2000">We believe that every business is unique, and so are
+                            its AI needs. Our team of experts works closely with you to design
+                            and deploy state-of-the-art technologies</p>
+                        <a href="#" class="get-in-touch jost-500 text-decoration-none">Get In Touch
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 21 21" width="30">
+                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" transform="translate(6 6)">
+                                    <path d="m8.5 7.5v-7h-7"></path>
+                                    <path d="m8.5.5-8 8"></path>
+                                </g>
+                            </svg></span>
+                        </a>
+                    </div> -->
+                </div>
+                <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 process-section g-4 justify-content-center mt-5">
+        
+                    <div class="col process-item ">
+                        <div class="circle-node-wrapper mx-auto d-flex justify-content-center align-items-center z-2">
+                            <span
+                                class="step-badge plus-jakarta-sans-600 position-absolute d-flex justify-content-center align-items-center">1.</span>
+                            <img src="images/client-discovery.svg" alt="">
+                        </div>
+                        <div>
+                            <h4 class="m-3 jost-500">Requirements Analysis (Week 1)</h4>
+                            <!-- <p class="jost-400 ">Assess your current capabilities and challenges.</p> -->
+                            <div class="d-flex justify-content-center">
+                                <ul class="jost-400 text-start">
+                                    <li>Business analysis and script integration</li>
+                                    <li>System architecture planning</li>
+                                    <li>CRM/Dialer connectivity assessment</li>
+                                    <li>Custom requirements documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col process-item">
+                        <div class="circle-node-wrapper mx-auto d-flex justify-content-center align-items-center z-2">
+                            <span
+                                class="step-badge plus-jakarta-sans-600 position-absolute d-flex justify-content-center align-items-center">2.</span>
+                            <img src="images/diagnos-and-analysis.svg" alt="">
+                        </div>
+                        <div>
+                            <h4 class="m-3 jost-500">Development & Training (Week 2-6)</h4>
+                            <!-- <p class="jost-400 ">Assess your current capabilities and challenges.</p> -->
+                            <div class="d-flex justify-content-center">
+                                <ul class="jost-400 text-start">
+                                    <li>AI agent development from scratch</li>
+                                    <li>Custom backend code creation</li>
+                                    <li>Script and knowledge base training</li>
+                                    <li>Integration development and testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col process-item">
+                        <div class="circle-node-wrapper mx-auto d-flex justify-content-center align-items-center z-2">
+                            <span
+                                class="step-badge plus-jakarta-sans-600 position-absolute d-flex justify-content-center align-items-center">3.</span>
+                            <img src="images/startegic-development.svg" alt="">
+                        </div>
+                        <div>
+                            <h4 class="m-3 jost-500">Testing & Optimization (Week 7)</h4>
+                            <!-- <p class="jost-400 ">Assess your current capabilities and challenges.</p> -->
+                             <div class="d-flex justify-content-center">
+                                 <ul class="jost-400 text-start">
+                                     <li>Comprehensive system testing</li>
+                                     <li>Performance optimization</li>
+                                     <li>Beta testing with client</li>
+                                     <li>Final adjustments and refinements</li>
+                                 </ul>
+                             </div>
+                        </div>
+                    </div>
+        
+                    <div class="col process-item">
+                        <div class="circle-node-wrapper mx-auto d-flex justify-content-center align-items-center z-2">
+                            <span
+                                class="step-badge plus-jakarta-sans-600 position-absolute d-flex justify-content-center align-items-center">4.</span>
+                            <img src="images/client-communication.svg" alt="">
+                        </div>
+                        <div>
+                            <h4 class="m-3 jost-500">Deployment & Support (Week 8)</h4>
+                            <!-- <p class="jost-400 ">Assess your current capabilities and challenges.</p> -->
+                            <div class="d-flex justify-content-center">
+                                <ul class="jost-400 text-start">
+                                    <li>Production deployment</li>
+                                    <li>Staff training and onboarding</li>
+                                    <li>Go-live support</li>
+                                    <li>1 week free support included</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        <!-- /*=========================== Implementation Process Overview Section End  =========================*/ -->
+
+        <!-- /*=========================== FAQ Section  =========================*/ -->
+        <section class="faq-section container-fluid py-5 px-3">
+            <div class="container py-lg-5">
+                <div class="row g-5">
+        
+                    <!-- Left Section -->
+        
+                    <div class="">
+                        <h1 class="plus-jakarta-sans-600 mb-4 dynamic-typewriter" data-speed="65" data-delay="300">
+                            Frequently Asked Questions</h1>
+                        <!-- <h2 class="jost-400 mb-0" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100"
+                                    data-aos-offset="0" data-aos-duration="1000">Navigating Challenges,
+                                    Creating Opportunities</h2> -->
+                    </div>
+
+                </div>
+                <div class="row g-4 justify-content-center">
+        
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                    
+                        <!-- FAQ Question 1 (Open by default) -->
+                        <div class="accordion-item border-0 border-bottom py-2">
+                            <h2 class="accordion-header" id="faq1">
+                                <button
+                                    class="accordion-button faq-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq1-collapse"
+                                    aria-expanded="true" aria-controls="faq1-collapse">
+                                    Q: How many calls can one AI agent handle simultaneously?
+                                    <span class="faq-accordion-icon-box"></span>
+                                </button>
+                            </h2>
+                            <!-- 🔥 data-bs-parent ko badal kar unique target id ke sath map kiya hai -->
+                            <div id="faq1-collapse" class="accordion-collapse collapse show"
+                                aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-0 jost-400 pb-2">
+                                   <p>Each AI agent can handle 1000+ simultaneous calls. The capacity depends on your server infrastructure and requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- FAQ Question 2-->
+                        <div class="accordion-item border-0 border-bottom py-2">
+                            <h2 class="accordion-header" id="faq2">
+                                <button
+                                    class="accordion-button collapsed faq-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq2-collapse"
+                                    aria-expanded="false" aria-controls="faq2-collapse">
+                                    Q: What's the minimum call duration for billing?
+                                    <span class="faq-accordion-icon-box"></span>
+                                </button>
+                            </h2>
+                            <div id="faq2-collapse" class="accordion-collapse collapse"
+                                aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-0 jost-400 pb-2">
+                                    <p>You pay only for actual usage. If a call lasts 10 seconds, you pay for 10 seconds. No minimum charges.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Question 3-->
+                        <div class="accordion-item border-0 border-bottom py-2">
+                            <h2 class="accordion-header" id="faq3">
+                                <button
+                                    class="accordion-button collapsed faq-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq3-collapse"
+                                    aria-expanded="false" aria-controls="faq3-collapse">
+                                    Q: Can the system integrate with our existing dialer/CRM?
+                                    <span class="faq-accordion-icon-box"></span>
+                                </button>
+                            </h2>
+                            <div id="faq3-collapse" class="accordion-collapse collapse"
+                                aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-0 jost-400 pb-2">
+                                    <p>Yes, we integrate with ViciDial, Twilio, Salesforce, HubSpot, and virtually any system with API access.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Question 4-->
+                        <div class="accordion-item border-0 border-bottom py-2">
+                            <h2 class="accordion-header" id="faq4">
+                                <button
+                                    class="accordion-button collapsed faq-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq4-collapse"
+                                    aria-expanded="false" aria-controls="faq4-collapse">
+                                    Q: What languages are supported?
+                                    <span class="faq-accordion-icon-box"></span>
+                                </button>
+                            </h2>
+                            <div id="faq4-collapse" class="accordion-collapse collapse"
+                                aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-0 jost-400 pb-2">
+                                    <p>We support 10+ languages including English, Urdu, Hindi, Spanish, German, Punjabi, with accent optimization.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Question 5-->
+                        <div class="accordion-item border-0 border-bottom py-2">
+                            <h2 class="accordion-header" id="faq5">
+                                <button
+                                    class="accordion-button collapsed faq-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq5-collapse"
+                                    aria-expanded="false" aria-controls="faq5-collapse">
+                                    Q: How quickly can we deploy?
+                                    <span class="faq-accordion-icon-box"></span>
+                                </button>
+                            </h2>
+                            <div id="faq5-collapse" class="accordion-collapse collapse"
+                                aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-0 jost-400 pb-2">
+                                    <p>Prebuilt solutions: 2 weeks | Custom solutions: 4-8 weeks depending on complexity.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Question 6-->
+                        <div class="accordion-item border-0 border-bottom py-2">
+                            <h2 class="accordion-header" id="faq6">
+                                <button
+                                    class="accordion-button collapsed faq-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq6-collapse"
+                                    aria-expanded="false" aria-controls="faq6-collapse">
+                                    Q: What's included in the free support period?
+                                    <span class="faq-accordion-icon-box"></span>
+                                </button>
+                            </h2>
+                            <div id="faq6-collapse" class="accordion-collapse collapse"
+                                aria-labelledby="faq6" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-0 jost-400 pb-2">
+                                    <p>30 days of comprehensive technical support, minor adjustments, system optimization, and staff training.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Question 7-->
+                        <div class="accordion-item border-0 border-bottom py-2">
+                            <h2 class="accordion-header" id="faq7">
+                                <button
+                                    class="accordion-button collapsed faq-accordion-button jost-500 bg-transparent shadow-none px-0 d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq7-collapse"
+                                    aria-expanded="false" aria-controls="faq7-collapse">
+                                    Q: Can we modify scripts and responses after deployment?
+                                    <span class="faq-accordion-icon-box"></span>
+                                </button>
+                            </h2>
+                            <div id="faq7-collapse" class="accordion-collapse collapse"
+                                aria-labelledby="faq7" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-0 jost-400 pb-2">
+                                    <p>Yes, you have complete control over scripts, knowledge base, and AI responses through our admin dashboard.</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                       
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        <!-- /*=========================== FAQ Section End =========================*/ -->
+
+        <!--  /*=========================== Services Section  =========================*/ -->
+        <!-- /* ============= Why Choose IntellifyAI Section =================== */ -->
+        <section class="agentic-ai-services-section container-fluid py-5">
+            <div class="container py-lg-4">
+        
+                <div class="row mb-5">
+                    <div class="agentic-ai-services-intro">
+                        <h1 class="plus-jakarta-sans-600 dynamic-typewriter m-0" data-speed="65" data-delay="300"
+                            data-threshold="0.2">
+                            Why Choose IntellifyAI?
+                        </h1>
+                    </div>
+                </div>
+        
+                <!-- gy-4 mobile par spacing handle karega aur g-lg-4 desktop par columns ke darmiyan spacing dega -->
+                <div class="row row-cols-1 row-cols-lg-3 gy-4 g-lg-4">
+        
+                    <!-- Card 1: Complete Ownership -->
+                    <div class="col agentic-ai-services-card">
+                        <h2 class="jost-400 pb-2 m-0">Complete Ownership</h2>
+                        <hr class="my-3">
+                        <ul class="agentic-ai-services-list list-unstyled jost-400 mt-4">
+                            <li><span class="text-black jost-600 me-sm-1">No Black Box:</span> You own the AI, scripts, and logic</li>
+                            <li><span class="text-black jost-600 me-sm-1">Backend Code:</span> Full source code ownership</li>
+                            <li><span class="text-black jost-600 me-sm-1">Data Control:</span> Complete control over your information</li>
+                            <li><span class="text-black jost-600 me-sm-1">No Vendor Lock-in:</span> Freedom to deploy anywhere</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Card 2: Cost Efficiency -->
+                    <div class="col agentic-ai-services-card">
+                        <h2 class="jost-400 pb-2 m-0">Cost Efficiency</h2>
+                        <hr class="my-3">
+                        <ul class="agentic-ai-services-list list-unstyled jost-400 mt-4">
+                            <li><span class="text-black jost-600 me-sm-1">No Platform Fees:</span> 50-70% lower per-minute costs</li>
+                            <li><span class="text-black jost-600 me-sm-1">Flexible Models:</span> Choose affordable TTS, STT, LLM options</li>
+                            <li><span class="text-black jost-600 me-sm-1">Your Infrastructure:</span> Use existing SIP trunks and servers</li>
+                            <li><span class="text-black jost-600 me-sm-1">Pay-as-you-go:</span> Only pay for actual usage</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Card 3: Advanced Customization -->
+                    <div class="col agentic-ai-services-card">
+                        <h2 class="jost-400 pb-2 m-0">Advanced Customization</h2>
+                        <hr class="my-3">
+                        <ul class="agentic-ai-services-list list-unstyled jost-400 mt-4">
+                            <li><span class="text-black jost-600 me-sm-1">Industry-Specific Training:</span> Fine-tuned for your business</li>
+                            <li><span class="text-black jost-600 me-sm-1">Custom Integrations:</span> Any system, any requirement</li>
+                            <li><span class="text-black jost-600 me-sm-1">Multilingual Fine-tuning:</span> Urdu, Hindi, Arabic, English optimization</li>
+                            <li><span class="text-black jost-600 me-sm-1">Built for Meta Ads:</span> Direct lead sync from Facebook/Instagram</li>
+                        </ul>
+                    </div>
+        
+                </div>
+        
+            </div>
+        </section>
+        <!-- /*=========================== Services Section End =========================*/ -->
+
+    </main>
+
+    <!-- /* =========================== Footer Section ========================= */ -->
+    <footer class="container-fluid p-3">
+        <div class="container text-center">
+            <p class="footer-text jost-700 m-0">© 2026 ALL RIGHTS RESERVED | INTELLIFY AI</p>
+        </div>
+    </footer>
+    <!-- /* =========================== Footer Section End ========================= */ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="script.js"></script>
+    <script>AOS.init(
+            {
+                once: true
+            }
+        );</script>
+
+</body>
+
+</html>

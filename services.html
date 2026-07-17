@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Industries — Intellify</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="images/intellify-logo.png?v=1" type="image/png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Caveat:wght@400..700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Mono:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HU&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="services-page">
+
+    <!-- /*=========================== Main Navbar =========================*/ -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom" id="mainNavbar">
+        <div class="container-lg py-2 px-2">
+            <!-- Navbar Title -->
+            <a class="navbar-brand syncopate-700 text-uppercase fs-lg-4 fs-5" href="index.html">
+                <img src="images/intellify-logo.png" alt="Intellify Logo" class="img-fluid" height="50"
+                    style="height: 50px; width: auto;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border: none; box-shadow: none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+
+                <!-- Off canvas Title (below: 992px) -->
+                <div class="offcanvas-header">
+                    <a class="navbar-brand syncopate-700" href="index.html">
+                        <img src="images/intellify-logo.png" alt="Intellify Logo" class="img-fluid" height="50"
+                            style="height: 50px; width: auto;">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body d-lg-flex justify-content-between align-items-center">
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 align-items-lg-center flex-wrap gap-3">
+                        <li class="nav-item jost-500"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="industries.html">Industries</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="agentic.html">Agentic</a></li>
+                        <!-- <li class="nav-item jost-500"><a class="nav-link" href="#">News</a></li> -->
+                        <li class="nav-item jost-500"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <!-- End -->
+
+                    <!-- /* Search and Talk Button on Navbar */ -->
+                    <!-- <span class="d-block d-lg-none">SEARCH FOR</span> -->
+                    <div class="nav-right-actions d-flex align-items-center ms-lg-3 position-relative">
+                        <a href="contact.html" class="btn-talk jost-500 text-decoration-none" id="letsTalkBtn">LET'S TALK!</a>
+                        <form class="search-wrapper" id="searchWrapper" role="search">
+                            <input class="search-input jost-400" type="search" placeholder="type and search"
+                                aria-label="Search" id="searchInput" />
+                            <button class="search-action-btn" type="submit" aria-label="Submit Search">
+                                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                            </button>
+                            <button class="close-btn" type="button" id="closeSearchBtn" aria-label="Close Search">
+                                <i class="fas fa-times fa-lg"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- End -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- /*=========================== Main Navbar End =========================*/ -->
+
+    <!-- Main Content -->
+    <main>
+
+        <!-------------------- Entry Title -------------->
+        <section class="services-page-entry-title col-lg-9 container-fluid py-3">
+            <div class="container py-4">
+                <div class="row text-center">
+                    <h1 class="plus-jakarta-sans-600 mb-3 reveal-text" data-duration="0.8s">Our Services</h1>
+                    <p class="col-lg-12 text-center pt-3 jost-400" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                        data-aos-delay="100" data-aos-offset="0" data-aos-duration="1000">At Intellify, we offer a suite of cutting-edge AI services designed to transform your business and drive innovation. Our
+                        expert team delivers end-to-end solutions tailored to your unique needs, ensuring you stay at the forefront of the AI
+                        revolution..</p>
+                </div>
+            </div>
+        </section>
+        <!-------------------- Entry Title -------------->
+
+
+        <!-- /* ========================== Our Service Card Section ========================== */ -->
+
+        <section class="our-services-section container-fluid py-5">
+            <div class="container">
+                <div class="row row-cols-lg-3 row-cols-1 gy-3 gy-lg-0">
+                    <div class="col our-services-card">
+                        <h2 class="jost-400 mb-2">AI Strategy & Business Case Development</h2>
+                        <p class="jost-400">We help you navigate the complex landscape of AI opportunities, risks, and regulations to create a robust AI strategy
+                        aligned with your business goals.</p>
+                        <hr>
+                        <ul class="our-services-list jost-500">
+                            <li>Strategic vision co-creation</li>
+                            <li>Actionable AI roadmap development</li>
+                            <li>Impactful use case identification</li>
+                            <li>ROI analysis and business case formulation</li>
+                        </ul>
+                    </div>
+                    <div class="col our-services-card">
+                        <h2 class="jost-400 mb-2">Data & AI Governance</h2>
+                        <p class="jost-400">Ensure your AI initiatives are ethical, secure, and compliant with our comprehensive governance services.</p>
+                        <hr>
+                        <ul class="our-services-list jost-500">
+                            <li>Data protection and privacy compliance</li>
+                            <li>Ethical AI framework implementation</li>
+                            <li>Fairness and transparency embedding</li>
+                            <li>AI risk assessment and mitigation strategies</li>
+                        </ul>
+                    </div>
+                    <div class="col our-services-card">
+                        <h2 class="jost-400 mb-2">Custom AI Solution Development</h2>
+                        <p class="jost-400">We design and implement bespoke AI solutions that drive tangible business value, focusing on:</p>
+                        <hr>
+                        <ul class="our-services-list jost-500">
+                            <li>Machine Learning and Deep Learning models</li>
+                            <li>Natural Language Processing applications</li>
+                            <li>Computer Vision systems</li>
+                            <li>Generative AI technologies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /* ========================== Our Service Card Section End ========================== */ -->
+
+        <!-- /* ============= Service Compliance Section =================== */ -->
+        
+        <section class="container-fluid">
+            <div class="container">
+                <div class="row py-5">
+                    <p class="services-compliance-note jost-400 " data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100"
+                        data-aos-offset="0" data-aos-duration="1000">Our solutions are built with a strong emphasis on legal compliance, ethics, and robustness.</p>
+                </div>
+            </div>
+        </section>
+        <!-- /* ============= Service Compliance Section End =================== */ -->
+        
+        <!-- /* ========================== Our Service Card Section ========================== */ -->
+        
+        <section class="our-services-section container-fluid py-5">
+            <div class="container">
+                <div class="row row-cols-lg-3 row-cols-1 gy-3 gy-lg-0">
+                    <div class="col our-services-card">
+                        <h2 class="jost-400 mb-2">AI Deployment and Scaling</h2>
+                        <p class="jost-400">Transform your AI prototypes into production-ready systems with our expert deployment and scaling services.</p>
+                        <hr>
+                        <ul class="our-services-list jost-500">
+                            <li>High-performance AI system implementation</li>
+                            <li>MLOps best practices integration</li>
+                            <li>Scalability and security optimization</li>
+                            <li>User adoption maximization strategies</li>
+                        </ul>
+                    </div>
+                    <div class="col our-services-card">
+                        <h2 class="jost-400 mb-2">AI-Powered Process Optimization</h2>
+                        <p class="jost-400">Leverage AI to streamline your operations and enhance efficiency across your organization.</p>
+                        <hr>
+                        <ul class="our-services-list jost-500">
+                            <li>Workflow automation</li>
+                            <li>Predictive maintenance</li>
+                            <li>Supply chain optimization</li>
+                            <li>Energy consumption reduction</li>
+                        </ul>
+                    </div>
+                    <div class="col our-services-card">
+                        <h2 class="jost-400 mb-2">AI for Customer Experience Enhancementt</h2>
+                        <p class="jost-400">Elevate your customer interactions with our AI-driven personalization and engagement solutions.</p>
+                        <hr>
+                        <ul class="our-services-list jost-500">
+                            <li>Hyper-personalization engines</li>
+                            <li>AI-powered chatbots and virtual assistants</li>
+                            <li>Customer behavior analysis and prediction</li>
+                            <li>Dynamic content recommendation systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /* ========================== Our Service Card Section End ========================== */ -->
+
+        <!-- /* ============= Service Compliance Section =================== */ -->
+        
+        <section class="container-fluid">
+            <div class="container">
+                <div class="row py-5">
+                    <p class="services-compliance-note jost-400 " data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                        data-aos-delay="100" data-aos-offset="0" data-aos-duration="1000">Our industry expertise ensures that our AI solutions address your sector-specific challenges and opportunities.</p>
+                </div>
+            </div>
+        </section>
+        <!-- /* ============= Service Compliance Section End =================== */ -->
+
+            <!-- /* ========================== Our Service Card Section ========================== */ -->
+            
+            <section class="our-services-section container-fluid py-5">
+                <div class="container">
+                    <div class="row row-cols-lg-3 row-cols-1 gy-3 gy-lg-0">
+                        <div class="col our-services-card">
+                            <h2 class="jost-400 mb-2">Industry-Specific AI Solutions</h2>
+                            <p class="jost-400">We offer tailored AI solutions for various industries, including:</p>
+                            <hr>
+                            <ul class="our-services-list jost-500">
+                                <li>Manufacturing</li>
+                                <li>Retail and E-commerce</li>
+                                <li>Energy and Utilities</li>
+                                <li>Media and Entertainment</li>
+                                <li>Life Sciences</li>
+                                <li>Public Sector</li>
+                            </ul>
+                        </div>
+                        <div class="col our-services-card">
+                            <h2 class="jost-400 mb-2">AI Training and Upskilling</h2>
+                            <p class="jost-400">Empower your team with the knowledge and skills needed to thrive in the AI era.</p>
+                            <hr>
+                            <ul class="our-services-list jost-500">
+                                <li>Customized AI workshops and training programs</li>
+                                <li>AI literacy courses for non-technical staff</li>
+                                <li>Advanced AI development training for technical teams</li>
+                                <li>Change management support for AI adoption</li>
+                            </ul>
+                        </div>
+                        <div class="col our-services-card">
+                            <h2 class="jost-400 mb-2">Ongoing AI Support and Maintenance</h2>
+                            <p class="jost-400"">We provide continuous support to ensure your AI systems remain effective and up-to-date.</p>
+                            <hr>
+                            <ul class="our-services-list jost-500">
+                                <li>Regular performance monitoring and optimization</li>
+                                <li>AI model retraining and fine-tuning</li>
+                                <li>System updates and security patches</li>
+                                <li>24/7 technical support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /* ========================== Our Service Card Section End ========================== */ -->
+
+            <!-- /*=========================== Collaboration 2 Section  =========================*/ -->
+            <section class="collaboration-2-section container-fluid d-flex justify-content-center align-items-center py-5">
+            
+                <div class="container h-100 position-relative z-3">
+                    <div class="row h-100 align-items-center justify-content-center text-center">
+                        <div class="collaboration-2-video-content">
+            
+                            <!-- <h4 class="jost-400 collaboration-2-subtitle  mb-4">— COLLABORATION</h4> -->
+            
+                            <!-- <h1 class="plus-jakarta-sans-600 m-0 collaboration-2-title mb-4 dynamic-typewriter" data-speed="65"
+                                        data-delay="300" data-threshold="0.2">
+                                        Ready to Transform Your Business with AI?</h1> -->
+            
+                            <h3 class="collaboration-2-description mb-4 jost-400">
+                                At Intellify, we're committed to guiding you through every step of your <strong class="jost-500">AI
+                                    journey</strong> from strategy to implementation and
+                                beyond. Let's work together to unlock the full potential of AI for your business.
+            
+                            </h3>
+            
+                            <button class="collaboration-2-lets-talk-btn mb-2 px-3">
+                                <a href="contact.html" class=" jost-500 text-decoration-none">Schedule a Consultation
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 21 21" width="30">
+                                        <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" transform="translate(6 6)">
+                                            <path d="m8.5 7.5v-7h-7"></path>
+                                            <path d="m8.5.5-8 8"></path>
+                                        </g>
+                                    </svg></span>
+                                </a>
+                            </button>
+            
+                            <!-- <p class="jost-400 fs-5 my-4 mb-0">
+                                        All queries are replied within <a href="#" class="text-black">24hrs.</a>
+                                    </p> -->
+            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /*=========================== Collaboration 2 Section End  =========================*/ -->
+       
+
+    </main>
+    <!-- Main Content -->
+
+    <!-- /* =========================== Footer Section ========================= */ -->
+    <footer class="container-fluid p-3">
+        <div class="container text-center">
+            <p class="footer-text jost-700 m-0">© 2026 ALL RIGHTS RESERVED | INTELLIFY AI</p>
+        </div>
+    </footer>
+    <!-- /* =========================== Footer Section End ========================= */ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="script.js"></script>
+    <script>AOS.init(
+            {
+                once: true
+            }
+        );</script>
+
+</body>
+
+</html>

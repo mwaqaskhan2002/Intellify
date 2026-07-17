@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About — Intellify</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="images/intellify-logo.png?v=1" type="image/png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Caveat:wght@400..700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Mono:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HU&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="about-us">
+
+    <!-- /*=========================== Main Navbar =========================*/ -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-transparent has-scroll-effect" id="mainNavbar">
+        <div class="container-lg py-2 px-2">
+            <!-- Navbar Title -->
+            <a class="navbar-brand syncopate-700" href="index.html">
+                <img src="images/intellify-logo.png" alt="Intellify Logo" class="img-fluid" height="50"
+                    style="height: 50px; width: auto;">
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border: none; box-shadow: none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+    
+                <!-- Off canvas Title (below: 992px) -->
+                <div class="offcanvas-header">
+                    <a class="navbar-brand syncopate-700 text-uppercase fs-lg-4 fs-5" href="index.html">
+                        <img src="images/intellify-logo.png" alt="Intellify Logo" class="img-fluid" height="50"
+                            style="height: 50px; width: auto;">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+    
+                <div class="offcanvas-body d-lg-flex justify-content-between align-items-center">
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 align-items-lg-center flex-wrap gap-3">
+                        <li class="nav-item jost-500"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="industries.html">Industries</a></li>
+                        <li class="nav-item jost-500"><a class="nav-link" href="agentic.html">Agentic AI</a></li>
+                        <!-- <li class="nav-item jost-500"><a class="nav-link" href="#">News</a></li> -->
+                        <li class="nav-item jost-500"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <!-- End -->
+    
+                    <!-- /* Search and Talk Button on Navbar */ -->
+                    <!-- <span class="d-block d-lg-none">SEARCH FOR</span> -->
+                    <div class="nav-right-actions d-flex align-items-center ms-lg-3 position-relative">
+                        <a href="contact.html" class="btn-talk jost-500 text-decoration-none" id="letsTalkBtn">LET'S TALK!</a>
+                        <form class="search-wrapper" id="searchWrapper" role="search">
+                            <input class="search-input jost-400" type="search" placeholder="type and search"
+                                aria-label="Search" id="searchInput" />
+                            <button class="search-action-btn" type="submit" aria-label="Submit Search">
+                                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                            </button>
+                            <button class="close-btn" type="button" id="closeSearchBtn" aria-label="Close Search">
+                                <i class="fas fa-times fa-lg"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- End -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- /*=========================== Main Navbar End =========================*/ -->
+    <main>
+    
+        <!-- /*=========================================== Hero Section ==================================================*/ -->
+        <section
+            class="about-hero-section position-relative overflow-hidden d-flex align-items-center justify-content-center">
+            <div class="about-hero-section-bg position-absolute w-100 h-100 start-0 top-0 z-1">
+                <img src="images/about-hero-section.jpg" class="object-fit-cover object-view-center"
+                    alt="About Us Background">
+            </div>
+    
+            <div class="about-hero-section-overlay"></div>
+    
+            <div class="container position-relative z-3">
+                <div class="row align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 about-hero-section-content">
+                        <h1 class="plus-jakarta-sans-600 mb-3 reveal-text" data-duration="0.8s">About Us</h1>
+                        <h6 class="jost-400 m-0" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100"
+                            data-aos-offset="0" data-aos-duration="1000">Pioneering AI Solutions for a Brighter Future</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /*=========================================== Hero Section End ==================================================*/ -->
+    
+        <!-- /*=========================================== Company Overview Section ==================================================*/ -->
+        <section class="company-overview-section container-fluid py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-12 pe-lg-5 company-overview-text">
+    
+                        <h1 class="plus-jakarta-sans-600 dynamic-typewriter mb-3" data-speed="65" data-delay="300"
+                                data-threshold="0.2">Our Mission</h1>
+                        <p class="jost-400 fs-lg-5 mb-3" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                                    data-aos-delay="500" data-aos-offset="0" data-aos-duration="1000">
+                            To empower businesses across sectors with cutting-edge AI solutions that drive innovation,
+                            efficiency, and sustainable growth. We're committed to bridging the gap between
+                            technological potential and real-world application, ensuring our clients stay at the
+                            forefront of the AI revolution.
+                        </p>
+
+                    </div>
+                    <div class="col-lg-5 col-sm-11 col-12 d-grid align-items-center justify-content-center mx-auto ">
+                        <div class="company-overview-img-wrap">
+    
+                            <div class="swiper company-overview-img-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/company-overview-slider-img-1.jpg" alt="Team 1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/company-overview-slider-img-2.jpg" alt="Team 2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/company-overview-slider-img-3.jpg" alt="Team 3">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="company-overview-img-slider-navigation d-flex align-items-center">
+                                <button class="company-overview-slider-prev" aria-label="Previous Slide">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="20" y1="12" x2="4" y2="12"></line>
+                                        <polyline points="10 18 4 12 10 6"></polyline>
+                                    </svg>
+                                </button>
+                                <button class="company-overview-slider-next" aria-label="Next Slide">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                                        <polyline points="14 6 20 12 14 18"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- /*=========================================== Company Overview Section End ==================================================*/-->
+    
+        <!-- /*=========================================== Timeline Section End ==================================================*/ -->
+        <section class="timeline container-fluid py-4">
+            <div class="position-relative timeline-container container-lg">
+    
+                <!-- Item 1 — image left, content right -->
+                <div class="timeline-item item-left mb-lg-5">
+                    <div class="tl-image">
+                        <img src="images/timeline-2010-img-1.jpg" alt="2010" class="img-fluid">
+                    </div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content my-5 my-lg-0  ps-2">
+                        <h3 class="jost-600 mb-4">Our Journey</h3>
+                        <p class="jost-400 mb-0">Founded by a team of AI enthusiasts and industry veterans, Intellify
+                            was born from a shared vision: to make advanced AI accessible and actionable for businesses
+                            of all sizes. Since our inception, we've grown into a diverse team of experts, each bringing
+                            unique insights from fields such as machine learning, data science, software engineering,
+                            and business strategy.</p>
+                    </div>
+                </div>
+    
+                <!-- Item 2 — content left, image right -->
+                <div class="timeline-item item-right mb-lg-5">
+                    <div class="tl-image">
+                        <img src="images/timeline-2013-img-2.jpg" alt="2013" class="img-fluid">
+                    </div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content my-5 my-lg-0">
+                        <!-- <p class="jost-500 tl-year mb-1">2013</p> -->
+                        <h3 class="jost-600 mb-4">Our Approach</h3>
+                        <p class="jost-400 mb-2">We believe in the transformative power of AI when applied thoughtfully
+                            and ethically. Our approach is rooted in:</p>
+                        <ol class="about-aproach text-lg-start jost-400" data-aos="fade-up"
+                                    data-aos-duration="500" data-aos-delay="1000">
+                            <li class="mb-1"><span class="jost-700">Collaboration:</span> We work closely with our clients, becoming an extension of
+                                their team to
+                                ensure solutions are tailored to their specific needs and goals.</li>
+                            <li class="mb-1"><span class="jost-700">Innovation:</span> We're constantly exploring the frontiers of AI technology,
+                                bringing the
+                                latest advancements to our clients' doorstep.</li>
+                            <li class="mb-1"><span class="jost-700">Ethical AI: </span> We prioritize responsible AI development, ensuring our
+                                solutions are
+                                transparent, fair, and compliant with regulations.</li>
+                            <li class="mb-1"><span class="jost-700">Scalability:</span> Our AI systems are designed to grow with your business,
+                                adapting to new
+                                challenges and opportunities.</li>
+                        </ol>
+                    </div>
+                </div>
+    
+                <!-- Item 3 — image left, content right -->
+                <div class="timeline-item item-left mb-lg-5">
+                    <div class="tl-image">
+                        <img src="images/timeline-2015-img-3.jpg" alt="2015" class="img-fluid">
+                    </div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content my-5 my-lg-0 ps-2">
+                        <!-- <p class="jost-500 tl-year mb-1">2015</p> -->
+                        <h3 class="jost-600 mb-4 mb-3">Our Expertise</h3>
+                        <p class="jost-400 mb-3">Our team comprises world-class AI researchers, engineers, and industry
+                            specialists with deep expertise in:</p>
+                        <ul class="about-text jost-400" data-aos="fade-up"
+                                    data-aos-duration="500" data-aos-delay="1000">
+                            <li>Machine Learning and Deep Learning</li>
+                            <li>Natural Language Processing</li>
+                            <li>Computer Vision</li>
+                            <li>Generative AI</li>
+                            <li>AI Strategy and Governance</li>
+                            <li>MLOps and AI Deployment</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Item 4 — content left, image right -->
+                <div class="timeline-item item-right mb-lg-5">
+                    <div class="tl-image">
+                        <img src="images/timeline-2017-img-4.jpg" alt="2017" class="img-fluid">
+                    </div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content my-5 my-lg-0 pe-2">
+                        <!-- <p class="jost-500 tl-year mb-1">2017</p> -->
+                        <h3 class="jost-600 mb-4">Our Impact</h3>
+                        <p class="jost-400 mb-3">From revolutionizing manufacturing processes to enhancing patient care
+                            in healthcare, our AI solutions have made a tangible impact across industries. We've helped
+                            our clients:</p>
+                        <ul class="about-text jost-400" data-aos="fade-up"
+                                    data-aos-duration="500" data-aos-delay="1000">
+                            <li>Reduce operational costs by up to 30%</li>
+                            <li>Increase productivity by 40%</li>
+                            <li>Enhance customer satisfaction by 25%</li>
+                            <li>Accelerate innovation cycles by 50%</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Item 5 — image left, content right -->
+                <div class="timeline-item item-left mb-lg-5">
+                    <div class="tl-image">
+                        <img src="images/timeline-2022-img-5.jpg" alt="2022" class="img-fluid">
+                    </div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content my-5 my-lg-0 ps-2">
+                        <!-- <p class="jost-500 tl-year mb-1">2022</p> -->
+                        <h3 class="jost-600 mb-4">Join Us on the AI Journey</h3>
+                        <p class="jost-400 mb-4">At Intellify, we're not just building AI solutions—we're shaping the
+                            future. Whether you're a Fortune 500 company or an ambitious startup, we're here to guide
+                            you through every step of your AI journey.</p>
+                        <p class="jost-400">Let's create a smarter, more efficient world together.</p>
+                        <button class="connect-with-our-expert-btn my-3 px-3 py-2">
+                            <a href="#" class=" jost-500 text-decoration-none">Connect with Our Experts
+                                <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 21 21" width="30">
+                                    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        transform="translate(6 6)">
+                                        <path d="m8.5 7.5v-7h-7"></path>
+                                        <path d="m8.5.5-8 8"></path>
+                                    </g>
+                                </svg></span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Item 6 — content left, image right -->
+                <!-- <div class="timeline-item item-right">
+                    <div class="tl-image">
+                        <img src="images/timeline-2024-img-6.jpg" alt="2024" class="img-fluid">
+                    </div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content pe-2 text-center text-lg-end">
+                        <p class="jost-500 tl-year mb-1">2024</p>
+                        <h3 class="jost-500 mb-2">Continued Innovation</h3>
+                        <p class="jost-400 mb-0">Launched a corporate social
+                            responsibility (CSR) program focused on education and community development.</p>
+                    </div>
+                </div> -->
+    
+            </div>
+        </section>
+    
+        <!-- /*=========================================== Timeline Section End ==================================================*/ -->
+
+    
+        <!-- /*=========================== Collaboration 2 Section  =========================*/ -->
+        <section class="collaboration-2-section container-fluid d-flex justify-content-center align-items-center py-3">
+    
+            <div class="container h-100 position-relative z-3">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="collaboration-2-video-content">
+    
+                        <!-- <h4 class="jost-400 collaboration-2-subtitle  mb-4">— COLLABORATION</h4> -->
+    
+                        <!-- <h1 class="plus-jakarta-sans-600 m-0 collaboration-2-title mb-4 dynamic-typewriter" data-speed="65"
+                            data-delay="300" data-threshold="0.2">
+                            Ready to Transform Your Business with AI?</h1> -->
+    
+                        <h3 class="collaboration-2-description mb-4 jost-400">
+                            At Intellify, we're committed to guiding you through every step of your <strong class="jost-500">AI
+                                journey</strong> from strategy to implementation and
+                                beyond. Let's work together to unlock the full potential of AI for your business.
+
+                        </h3>
+    
+                        <button class="collaboration-2-lets-talk-btn mb-2 px-3">
+                            <a href="contact.html" class=" jost-500 text-decoration-none">Schedule a Consultation
+                                <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 21 21" width="30">
+                                    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" transform="translate(6 6)">
+                                        <path d="m8.5 7.5v-7h-7"></path>
+                                        <path d="m8.5.5-8 8"></path>
+                                    </g>
+                                </svg></span>
+                            </a>
+                        </button>
+    
+                        <!-- <p class="jost-400 fs-5 my-4 mb-0">
+                            All queries are replied within <a href="#" class="text-black">24hrs.</a>
+                        </p> -->
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /*=========================== Collaboration 2 Section End  =========================*/ -->
+    
+    </main>
+
+    <!-- /* =========================== Footer Section ========================= */ -->
+    <footer class="container-fluid p-3">
+        <div class="container text-center">
+            <p class="footer-text jost-700 m-0">© 2026 ALL RIGHTS RESERVED | INTELLIFY AI</p>
+        </div>
+    </footer>
+    <!-- /* =========================== Footer Section End ========================= */ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="script.js"></script>
+    <script>AOS.init(
+            {
+                once: true
+            }
+        );</script>
+
+</body>
+
+</html>
+
+
