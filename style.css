@@ -413,7 +413,7 @@ main {
 .navbar-nav .nav-item .nav-link{
     font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     padding: 7px 12px;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -2281,7 +2281,7 @@ main {
 .about-hero-section-content h1{
     font-size: clamp(3.125rem, 2.6429rem + 2.4107vw, 4.8125rem);
     letter-spacing: -2.304px;
-    line-height: 61px;
+    /* line-height: 61px; */
     color: #ffffff;
 }
 .about-hero-section-content h6{
@@ -2547,12 +2547,12 @@ main {
 
 .contact-page .lets-talk-content h2{
     font-size: clamp(0.9375rem, 0.9018rem + 0.1786vw, 1.0625rem);
-    line-height: 23.1px;
+    /* line-height: 23.1px; */
 }
 
 .contact-page .follow-us h4{
     font-size: 28px;
-    line-height: 28px;
+    /* line-height: 28px; */
     letter-spacing: -1.56px;
 }
 /* .contact-page .follow-us p{
@@ -2880,14 +2880,14 @@ main {
 .agentic-hero-section-content h1{
     font-size: clamp(3.125rem, 2.6429rem + 2.4107vw, 4.8125rem);
     letter-spacing: -2.304px;
-    line-height: 85px;
+    /* line-height: 85px; */
     color: #ffffff;
 }
 .agentic-hero-section-content h6{
     font-size: clamp(1rem, 0.9107rem + 0.4464vw, 1.3125rem);
     letter-spacing: -0.512px;
     color: rgba(255, 255, 255, 0.56);
-    line-height: 25px;
+    /* line-height: 25px; */
 }
 
 /*=========================================== Agentic Hero Section ==================================================*/ 
@@ -3506,22 +3506,80 @@ Life Sciences Solutions */
 
 
 /* ===================================== Services Page  ===================================== */
+
+.services-hero-section {
+    width: 100%;
+    height: 585px;  
+    min-height: 500px; 
+    max-height: 750px;
+    padding-top: 80px; /* Solid Navbar gap offset */
+}
+
+@media (max-width: 991px) {
+    .services-hero-section {
+        height: 500px;
+    }
+}
+
+@media (max-width: 575px) {
+    .services-hero-section {
+        height: 420px;
+    }
+}
+
+.services-hero-section-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+}
+
+
+.services-hero-section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(16, 16, 16, 0.65) 0%, rgba(10, 10, 10, 0.5) 100%); 
+    z-index: 2;
+}
+
+.service-hero-section-content {
+    position: relative;
+    z-index: 3;
+}
+
+.service-hero-section-content h1{
+    font-size: clamp(3.125rem, 2.6429rem + 2.4107vw, 4.8125rem);
+    letter-spacing: -2.304px;
+    /* line-height: 61px; */
+    color: #ffffff;
+}
+.service-hero-section-content p{
+    /* font-size: clamp(1rem, 0.9107rem + 0.4464vw, 1.3125rem); */
+    letter-spacing: -0.512px;
+    color: rgba(255, 255, 255, 0.56);
+    /* line-height: 25px; */
+}
+
+
 /* * ===================================== Entry Title ===================================== */ 
-.services-page-entry-title h1{
+/* .services-page-entry-title h1{
     font-size: clamp(3.125rem, 2.875rem + 1.25vw, 4rem);
     letter-spacing: -2.56px;
     line-height: clamp(3.125rem, 2.875rem + 1.25vw, 4rem);
 }
 .services-page-entry-title p{
     font-size: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);
-}
+} */
 /* ===================================== Entry Title End ===================================== */
 
 /* =========================== Our Services Card ===================================== */
 
 .our-services-section {
     color: #000000;
-    background-color: rgb(247, 247, 247);
+    /* background-color: rgb(247, 247, 247); */
 }
 
 
@@ -3543,10 +3601,104 @@ Life Sciences Solutions */
 /* ========================== Our Services Card End ========================== */
 
 /* ========================== Service Compliance Section ========================== */
-.services-compliance-note{
-    font-size: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);
-    text-align: center;
+.services-compliance-section{
+    background-color: rgb(247, 247, 247);
+}
+
+.services-compliance-note h3{
+    font-size: 40px;
+    letter-spacing: -2.56px;
+    color: rgba(0, 0, 0);
+    /* background-color: rgb(247, 247, 247); */
+
+    /* line-height: clamp(3.125rem, 2.875rem + 1.25vw, 4rem); */
 }
 /* ========================== Service Compliance Section End ========================== */
 
-/* ===================================== Our Services Card End ===================================== */
+/* ===================================== Services Page End =============================================*/
+
+
+/* ======================================= AI Applications Page  =============================================*/
+
+/* ===================== Hero Section ===============================*/
+.ai-application-hero-section {
+    width: 100%;
+    height: 585px;  
+    min-height: 500px; 
+    max-height: 750px;
+    padding-top: 80px; /* Solid Navbar gap offset */
+}
+
+@media (max-width: 991px) {
+    .ai-application-hero-section {
+        height: 500px;
+    }
+}
+
+@media (max-width: 575px) {
+    .ai-application-hero-section {
+        height: 420px;
+    }
+}
+
+.ai-application-hero-section-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+}
+
+
+.ai-application-hero-section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(16, 16, 16, 0.65) 0%, rgba(10, 10, 10, 0.5) 100%); 
+    z-index: 2;
+}
+
+.ai-application-hero-section-content {
+    position: relative;
+    z-index: 3;
+}
+
+.ai-application-hero-section-content h1{
+    font-size: clamp(3.125rem, 2.6429rem + 2.4107vw, 4.8125rem);
+    letter-spacing: -2.304px;
+    /* line-height: 61px; */
+    color: #ffffff;
+}
+.ai-application-hero-section-content p{
+    /* font-size: clamp(1rem, 0.9107rem + 0.4464vw, 1.3125rem); */
+    letter-spacing: -0.512px;
+    color: rgba(255, 255, 255, 0.56);
+    /* line-height: 25px; */
+}
+
+ /* ========================== AI Applications Card Section ========================== */ 
+ .ai-application-card-section {
+    color: #000000;
+    background-color: rgb(247, 247, 247);
+}
+
+
+.ai-application-card h2 {
+    font-size: clamp(1.5rem, 1.4286rem + 0.3571vw, 1.75rem) !important;
+    color: #0a0a0a !important;
+    /* line-height: 36.4px; */
+}
+
+.ai-application-card p {
+    font-size: 16px !important;
+    color: rgba(0, 0, 0, 0.68) !important;
+}
+
+/* List Item Line Spacing Architecture */
+.ai-application-card li {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px !important;
+}
+
+ /* ========================== AI Applications Card Section End ========================== */ 
